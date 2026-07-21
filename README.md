@@ -1,14 +1,16 @@
 # Polymarket Trading Bot | Polymarket Arbitrage Bot
 
-An open-source **TypeScript** Polymarket trading bot and Polymarket arbitrage bot for high-performance automated trading on Polymarket crypto **5-minute** Up/Down markets — **BTC, ETH, SOL, and XRP**.
+A high-performance **Polymarket trading bot** and **Polymarket arbitrage bot** for automated trading on Polymarket crypto **5-minute** Up/Down markets — **BTC, ETH, SOL, and XRP**.
 
-It implements a **late-window resolution snipe (endcycle sniper)**: wait until the outcome is nearly decided, buy the favorite at **~$0.98–$0.99**, then hold to resolution for a small payout on each winning cycle.
+It runs a **late-window resolution snipe (endcycle sniper)**: wait until the outcome is nearly decided, buy the favorite at **~$0.98–$0.99**, then hold to resolution for a small payout on each winning cycle.
+
+Beyond a single strategy, this page documents the **full landscape of remarkable Polymarket bot strategies** used by serious traders in 2026 — from classic complement arbitrage to latency sniping, ladder market making, stair exits, momentum, and AI probability edges.
 
 ![Polymarket Arbitrage Bot Banner](doc/banner.png)
 
 **Live profile using this strategy:** [**@antsaslyku on Polymarket**](https://polymarket.com/@antsaslyku)
 
-**Repository:** [github.com/trum3it/polymarket-arbitrage-bot](https://github.com/trum3it/polymarket-arbitrage-bot) · **Author:** [@trum3it](https://github.com/trum3it)
+**Telegram:** [@antsaslyku](https://t.me/antsaslyku) · **Author:** [@trum3it](https://github.com/trum3it)
 
 ---
 
@@ -17,22 +19,32 @@ It implements a **late-window resolution snipe (endcycle sniper)**: wait until t
 - Built for Polymarket’s high-volume **5-minute crypto Up/Down** markets (BTC, ETH, SOL, XRP)
 - **Endcycle / late-window sniper** — enter only when the favorite is priced near resolution
 - Real-time price monitoring across **four assets** on the same 5-minute clock
-- Configurable entry band, timing window, position size, and fee assumptions
-- Live Polymarket wallet balance awareness (EOA or proxy/funder wallets)
-- Simulation mode with console output + persistent `logs.txt` trade history
 - Clear buy → redeem cycle aligned with on-chain CTF Exchange + resolution settlement
-- Tunable constants in code for research, backtesting-style runs, and strategy iteration
-- Foundation for expanding into additional sniper, arbitrage, and market-making strategies
+- Small, repeatable edges designed to compound across many 5-minute windows
+- Proven live activity with public on-chain buy/redeem proof
+- Deep coverage of the major bot strategies used on Polymarket today (except copy trading)
+- Foundation for expanding into sniper, arbitrage, market-making, and momentum modules
 
 ---
 
-## Included Trading Bot
+## Strategy Catalog (Except Copy Trading)
 
-Designed for ultra-short-term Polymarket markets (including 5-minute rounds), this repository focuses on a proven **endcycle sniper** framework — a robust foundation for building and scaling automated trading strategies on Polymarket.
+Polymarket’s CLOB is now dominated by bots. Simple “YES + NO < $1” gaps often last only a few seconds. The strategies below are what serious systems actually run — alone or as a multi-strategy portfolio.
 
-| Bot | Market | Edge |
-|-----|--------|------|
-| **Endcycle Sniper** | BTC / ETH / SOL / XRP 5m Up/Down | Buy favorite @ **0.97–0.99** in the last ~40s → redeem @ **$1.00** |
+| # | Strategy | Style | Typical edge |
+|---|----------|-------|--------------|
+| 1 | **Endcycle Sniper** | Directional late entry | Buy favorite @ 0.97–0.99 → redeem @ $1.00 |
+| 2 | **Complement / Sum-to-One Arb** | Market-neutral | Buy YES+NO when combined ask < $1 |
+| 3 | **Latency / Oracle Arb** | Speed | Trade before Chainlink / UI catches spot moves |
+| 4 | **101 Cents Maker** | Liquidity making | Sell YES+NO pairs targeting ~$1.01 combined |
+| 5 | **Ladder Market Making** | Inventory + spread | Layered bids/asks across price levels |
+| 6 | **Stair Exit / Unwind** | Execution | Staged YES/NO liquidation near resolution |
+| 7 | **Dual-Side Volatility Arb** | Neutral / hedge | Exploit mispriced probs + short-term vol |
+| 8 | **Lost Token Sniper** | Dual-position | Hold both sides, dump predicted loser early |
+| 9 | **High-Frequency Momentum** | Directional | Ride order-flow / news momentum bursts |
+| 10 | **Imbalance Arb** | Book imbalance | Buy the cheap side when book is skewed |
+| 11 | **Logical / Multi-Outcome Arb** | Constraint | Related markets violate probability rules |
+| 12 | **AI Probability / Info Arb** | Information | Model fair odds vs market price |
 
 ---
 
@@ -56,7 +68,7 @@ This is my public Polymarket account — you can check the bot’s P/L live:
 
 ## Live Proof — Buy → Redeem Cycles
 
-These are real on-chain transactions from [@antsaslyku](https://polymarket.com/@antsaslyku) on Polygon. Each pair shows the same pattern the bot follows: **buy the favorite late in the window → redeem at $1.00 after resolution**.
+These are real on-chain transactions from [@antsaslyku](https://polymarket.com/@antsaslyku) on Polygon. Each pair shows the same pattern the **endcycle sniper** follows: **buy the favorite late in the window → redeem at $1.00 after resolution**.
 
 ![Polymarket Activity](doc/activity.png)
 
@@ -93,11 +105,33 @@ Trade history includes repeated entries in late-stage crypto prediction markets 
 
 ---
 
-## 1. Polymarket Endcycle Sniper Bot (Introduction)
+## Why Polymarket Bot Strategies Matter in 2026
 
-**Polymarket Endcycle Sniper Bot** is an automated trading system designed to monitor short-duration prediction markets and execute high-probability trades near the end of each 5-minute epoch.
+Polymarket’s short-interval crypto markets (especially **BTC / ETH / SOL / XRP 5-minute Up/Down**) created a new class of high-frequency prediction-market trading:
 
-It connects to Polymarket market data in real time, waits through most of the window, triggers buys when the favorite ask enters a configured threshold band (e.g. **0.97–0.99**), manages risk with timed exits, and settles winning positions after market resolution.
+- Markets resolve every **5 minutes** — hundreds of cycles per day
+- Binary outcomes settle at exactly **$0 or $1**, so pricing has hard mathematical structure
+- The CLOB + Polygon settlement stack lets bots automate **buy → merge/redeem** loops
+- Retail flow is still large; professional bots compete on **latency, inventory, and risk**
+
+Industry observations commonly cited in 2026 research and bot write-ups:
+
+- Classic complement-arb windows often last only **~2–3 seconds**
+- A large share of pure arb is captured by **sub-100ms** execution stacks
+- Median raw spreads can be thin (**fractions of a cent**) after fees
+- A growing share of bot P/L comes from **non-pure-arb** strategies: market making, momentum, endcycle sniping, correlation, and information edges
+
+That is why modern Polymarket systems are usually **multi-strategy**, not single-trick bots.
+
+---
+
+## 1. Polymarket Endcycle Sniper Bot (Featured)
+
+**Polymarket Endcycle Sniper Bot** monitors short-duration prediction markets and executes high-probability trades near the end of each 5-minute epoch.
+
+It waits through most of the window, triggers buys when the favorite ask enters a configured band (e.g. **0.97–0.99**), manages risk with timed exits, and settles winning positions after resolution.
+
+This is the strategy behind the live [@antsaslyku](https://polymarket.com/@antsaslyku) activity shown above.
 
 ### Strategy Overview
 
@@ -126,186 +160,361 @@ Near the end, when price has usually already moved one way, the likely winner tr
 
 | Setting | Value |
 |---------|--------|
-| Markets | **BTC, ETH, SOL, XRP** — 5m Up/Down (`btc-updown-5m`, `eth-updown-5m`, `sol-updown-5m`, `xrp-updown-5m`) |
+| Markets | **BTC, ETH, SOL, XRP** — 5m Up/Down |
 | Positions | Up to **one trade per asset** per 5m window (max 4 concurrent) |
 | Entry time | **250–290s** after window start |
 | Entry price | Favorite ask **0.97–0.99** (usually **0.98–0.99**) |
 | Side selection | Whichever side is in the band; if both qualify, pick the **higher** price |
-| Exit | **t = 298s** — redeem @ **$1.00/share** if bid ≥ 0.90, else exit at market bid (loss) |
-| Position size | **$10** per trade (`BET_USD` in code) |
-| Fees (simulation) | **1%** on notional; **0.5%** slippage on loss exits |
+| Exit | **t = 298s** — redeem @ **$1.00/share** if bid ≥ 0.90, else exit at market bid |
 
 Many windows produce **no trade** — normal when no side reaches the price band before time runs out.
 
----
+### Why traders still use it
 
-## Requirements
-
-- **Node.js** ≥ 20.6
-- Polymarket wallet with **USDC** on Polygon
-- Internet access (Polymarket Gamma + CLOB APIs)
+Endcycle sniping does not need to beat the entire market all day. It only needs a repeatable late-window setup: when the favorite is already **96–99¢**, the remaining uncertainty is small and the payout-to-risk math is explicit. Capital turns over every few minutes, so compounding comes from **frequency**, not from huge single-trade wins.
 
 ---
 
-## Quick Start
+## 2. Complement Arbitrage (Sum-to-One / Dump-Hedge)
 
-### 1. Install
+Also called **intra-market arbitrage**, **structural dump-hedge**, or **YES+NO < $1** arb.
 
-```bash
-git clone https://github.com/trum3it/polymarket-arbitrage-bot.git
-cd polymarket-arbitrage-bot
-npm install
-```
+### Core idea
 
-### 2. Environment
+In a binary market, exactly one side pays **$1.00** at resolution. If you hold **1 YES + 1 NO**, you are guaranteed **$1.00** back (before fees). Therefore:
 
-```bash
-# Windows
-copy .env.example .env
+- If `ask_YES + ask_NO < 1.00`, buying both sides locks a structural profit
+- If `bid_YES + bid_NO > 1.00`, selling both sides can lock a maker-style edge
 
-# macOS / Linux
-cp .env.example .env
-```
+Example: YES ask **$0.48** + NO ask **$0.50** = **$0.98** → theoretical **$0.02** locked profit per share pair if both fills complete.
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `POLYMARKET_PRIVATE_KEY` | **Yes** | 64-character hex private key (with or without `0x`) |
-| `PROXY_WALLET_ADDRESS` | No | Polymarket proxy/funder address for email or social-login accounts |
+### How bots execute it
 
-**Wallet setup**
+1. Stream CLOB books for target markets (often 5m crypto Up/Down)
+2. Detect when combined ask falls below a threshold (e.g. `1.00 - fees - target_edge`)
+3. Place near-simultaneous YES and NO buys (FOK/FAK/GTD common)
+4. Optionally **merge** matched pairs back to USDC when inventory is balanced
+5. Redeem leftovers after resolution if needed
 
-| Account type | What to set |
-|--------------|-------------|
-| MetaMask / hardware wallet | `POLYMARKET_PRIVATE_KEY` only — USDC in that EOA |
-| Polymarket.com (email / Google) | Both `POLYMARKET_PRIVATE_KEY` **and** `PROXY_WALLET_ADDRESS` (your profile address under Polymarket account settings) |
+### Reality check (2026)
 
-Never commit `.env`.
+- Opportunities are **short-lived** (often a few seconds)
+- Sub-100ms stacks capture most of the cleanest prints
+- Taker fees + leg risk (one side fills, the other misses) can erase the edge
+- Still useful in thinner markets, newer listings, or as a secondary module inside a larger bot
 
-### 3. Run
-
-```bash
-npm start
-```
-
-Optional build:
-
-```bash
-npm run build
-```
-
-This repository reads live Polymarket prices and **simulates** the same entry/exit logic (console + `logs.txt`). Press **Ctrl+C** to stop and see balance, P/L, and trade count.
+**Best for:** market-neutral capital, low directional bias, automation-first traders.
 
 ---
 
-## Reading the Logs
+## 3. Latency / Oracle Arbitrage
 
-| Message | Meaning |
-|---------|---------|
-| `New 5m window (BTC, ETH, SOL, XRP)` | New 5-minute round for all assets |
-| `BTC Up=0.98 Down=0.02 \| ETH …` | Heartbeat — prices across markets |
-| `Late entry window in 120s` | Waiting until t=250s |
-| `Watching for late favorite @0.98–0.99...` | In entry window, price in band on at least one market |
-| `[ENTRY] ETH BUY Up (favorite) @ 0.98` | Late snipe on Ethereum 5m market |
-| `[EXIT] BTC REDEEM Up @ 1.00 (resolution @ $1.00)` | Win — settled at $1/share |
-| `[EXIT] SOL SELL … (favorite lost — exit at bid)` | Loss on Solana market |
-| `Wallet balance is $0` | Deposit USDC or fix `PROXY_WALLET_ADDRESS` |
+### Core idea
 
-History is appended to **`logs.txt`**.
+Polymarket 5-minute crypto markets resolve from oracle / reference price feeds (commonly discussed around **Chainlink**-style update cadence). Spot venues like Binance often move **before** Polymarket’s implied probability fully updates.
 
----
+Bots watch the spot feed and Polymarket CLOB at the same time. When spot jumps hard and Polymarket tokens have not repriced yet, they buy the side that the move implies (Up or Down) and exit as the book catches up — or hold to resolution if the move is decisive.
 
-## Example Simulation Runs
+### Typical pipeline
 
-Simulated terminal runs (market conditions vary):
+1. WebSocket spot prices (BTC/ETH/SOL/XRP)
+2. WebSocket / polling Polymarket CLOB mid/asks
+3. Detect lag: spot move vs Polymarket probability still stale
+4. Fire aggressive entry with strict size + slippage caps
+5. Exit on reprice, or hold if near endcycle and confidence is high
 
-| Starting balance | Per-trade size | Profit (example) |
-|------------------|----------------|------------------|
-| $100 | $10 | ~$40 |
-| $500 | $50 | ~$300 |
-| $1,000 | $100 | ~$500 |
+### Why it is hard
 
-These differ from the live [@antsaslyku](https://polymarket.com/@antsaslyku) results above — the repo **simulates** logic locally; your real P/L depends on balance, sizing, and how often each asset hits the 0.97–0.99 band.
+- Edge is measured in **hundreds of milliseconds to a few seconds**
+- Requires dedicated RPC, co-located thinking, and careful fee accounting
+- False signals during choppy markets destroy expectancy
+- Competing latency bots compress the same window
+
+**Best for:** HFT-oriented infra, low-latency Polygon connectivity, teams comfortable with aggressive risk controls.
 
 ---
 
-## Tuning in Code
+## 4. 101 Cents Liquidity Maker (Pair Selling)
 
-Constants in `src/index.ts`:
+### Core idea
 
-| Constant | Default | Purpose |
-|----------|---------|---------|
-| `MARKETS` | `btc, eth, sol, xrp` | Assets to monitor |
-| `BET_USD` | `10` | Dollars per trade (per asset) |
-| `ENTRY_TIME_MIN` / `ENTRY_TIME_MAX` | `250` / `290` | Entry window (seconds) |
-| `ENTRY_PRICE_MIN` / `ENTRY_PRICE_MAX` | `0.97` / `0.99` | Favorite price band |
-| `RESOLVE_SEC` | `298` | Settlement time |
-| `FEE_BPS` | `100` | 1% fee |
+Instead of buying underpriced pairs, the bot **creates** YES+NO inventory (via split / inventory) and sells both sides so the combined sale price targets about **$1.01** (101 cents) — capturing roughly **1–2¢** per completed pair.
+
+This is a **liquidity-making / inventory** strategy, not a directional bet.
+
+### Typical loop
+
+1. Split USDC into YES + NO tokens (or accumulate inventory over time)
+2. Place balanced sell ladders on both sides
+3. Require `sell_YES + sell_NO >= 1.01` (or a dynamic min pair sum)
+4. Fill in small pair sizes rather than dumping the whole book
+5. Re-skew quotes when inventory becomes unbalanced
+6. Repeat across many 5-minute windows
+
+### Why people like it
+
+- Aims for many small, market-neutral cycles
+- Scales with uptime and quote quality more than “calling direction”
+- Works naturally with inventory balancing and force-hedge logic
+
+### Risks
+
+- Inventory can get stuck on one side if the market trends hard
+- Adverse selection from informed flow
+- If pair sum is set too aggressively, fills dry up; if too loose, edge vanishes after fees
+
+**Best for:** 24/7 maker bots on liquid short-interval markets.
 
 ---
 
-## Why This Repository
+## 5. Ladder Market Making
 
-This repository is designed as a practical open-source resource for:
+### Core idea
 
-- Polymarket trading bots
-- Prediction market automation
-- Crypto 5-minute Up/Down strategies
-- Late-window / endcycle sniper systems
-- Quantitative trading research on Polymarket
-- Algorithmic TypeScript trading frameworks
+Instead of one bid/ask, the bot posts a **ladder** of limit orders at multiple price levels on YES and/or NO. This:
+
+- Captures spread across a range of retail fills
+- Reduces impact vs a single large order
+- Lets inventory rebalance gradually as different rungs fill
+
+Modern ladder bots usually combine:
+
+- Dual-sided quoting
+- Inventory skew (quote more aggressively on the heavy side to unload)
+- Volatility-aware spread widening
+- Cancel/replace loops every few hundred ms to seconds
+
+### Inventory-balanced variant
+
+A popular 2026 design is the **inventory-balanced ladder**:
+
+1. First-leg sell when momentum/order-flow favors one side
+2. Hedge the opposite side to stay near-neutral
+3. Force-hedge if imbalance exceeds a hard USDC limit
+4. Pull quotes near market close / news events
+
+**Best for:** traders who want steady maker P/L and can handle inventory math.
+
+---
+
+## 6. Stair Exit / Stair Arbitrage (Unwinding Engine)
+
+### Core idea
+
+Many bots lose money on **exits**, not entries. Stair logic focuses on the final phase of a window: unwind YES and NO inventory with liquidity-aware steps instead of market-dumping.
+
+### Typical stair sequence
+
+1. Near resolution, score both sides for depth and price quality
+2. **Selective first exit** — liquidate the easier / better-priced side first
+3. **Stair unwind** the remaining side in incremental clips at chosen price levels
+4. Optionally finish with a coordinated sweep if depth suddenly appears
+5. Keep hedge / exposure caps active the whole time
+
+### Why it matters
+
+In 5-minute markets, the last 30–60 seconds are chaotic. A stair engine turns exit into a controlled process: less slippage, fewer “I sold into a vacuum” disasters, better capital preservation for the next cycle.
+
+**Best for:** dual-inventory strategies (101¢, ladder, lost-token) that must exit cleanly every epoch.
+
+---
+
+## 7. Dual-Side Volatility / Probability Arbitrage
+
+### Core idea
+
+This family of bots does **not** try to predict the winner. It looks for short-term mispricing between:
+
+- Implied probabilities
+- Order-book imbalance
+- Realized short-term volatility
+- Fair model value
+
+Then it trades **both sides** with hedges so net exposure stays controlled while harvesting small edges across many fills.
+
+### Common tactics
+
+- Buy undervalued side, sell/overweight the rich side
+- Use quantitative entry/exit thresholds rather than gut direction
+- Hedge after first fill so a one-leg fill does not become a naked directional bet
+- Compound tiny edges over high trade volume
+
+**Best for:** quant-style systems with strong risk modules and continuous monitoring.
+
+---
+
+## 8. Lost Token Sniper
+
+### Core idea
+
+On short Up/Down epochs, a bot may temporarily hold **both** YES and NO (or acquire them via split). As the window progresses and one outcome becomes likely, the bot identifies the **losing token** and sells it before resolution — keeping the winner to redeem at $1.00.
+
+If the combined acquisition cost was near or below $1 and the loser is sold for residual value, the cycle can be profitable even without perfect foresight.
+
+### Workflow
+
+1. Allocate into YES and NO early or mid-window
+2. Monitor books + momentum to estimate which side is dying
+3. Exit the predicted loser into remaining bid liquidity
+4. Hold / redeem the winner at settlement
+5. Repeat next epoch
+
+### Risks
+
+- Mis-identifying the loser (classic last-second flip)
+- Thin bids on the dying side → sell fills at garbage prices
+- Fees on two legs reduce the theoretical edge
+
+**Best for:** traders who already run dual-inventory systems and want an active mid-window optimization layer.
+
+---
+
+## 9. High-Frequency Momentum Trading
+
+### Core idea
+
+When breaking news, a sudden spot move, or a burst of aggressive CLOB flow hits, Polymarket prices **trend** before fully settling. Momentum bots detect the impulse early and ride it.
+
+### Typical signals
+
+- Sudden volume / trade-rate spikes
+- Order-book imbalance flips
+- Spot exchange momentum confirmation
+- Short lookback returns on YES/NO mids
+
+### Risk controls that separate survivors from blowups
+
+- Trailing stops / time stops (these markets die every 5 minutes)
+- Circuit breakers on session drawdown
+- Max position per market / per minute
+- No-trade zones in dead chop
+
+**Reality:** short-horizon crypto binaries can behave close to a random walk. Momentum works in bursts; without strict filters it overtrades and dies.
+
+**Best for:** low-latency stacks that can enter and exit inside the same window.
+
+---
+
+## 10. Imbalance Arbitrage (“Buy the Cheap Side”)
+
+### Core idea
+
+Sometimes one side of the book is temporarily too cheap relative to the other — not necessarily `YES+NO < 1`, but a **relative** mispricing vs depth, recent trades, or a short-term fair value model.
+
+Bots buy the cheap side (or sell the rich side) and flatten when the book normalizes.
+
+### Why it appears
+
+- Retail panic one-sided selling
+- Momentary liquidity gaps
+- Latency between related markets
+- Maker inventory dumps
+
+**Best for:** continuous scanners across many markets with strict adverse-selection filters.
+
+---
+
+## 11. Logical / Multi-Outcome / Correlation Arbitrage
+
+### Core idea
+
+Beyond single binary markets, Polymarket hosts related questions whose probabilities must obey logic:
+
+- Mutually exclusive outcomes should not sum above $1 (after fees)
+- Nested events (“A happens” vs “A and B happen”) have inequality constraints
+- Cross-market baskets can be temporarily inconsistent
+
+Advanced bots project prices onto a valid probability simplex (research systems have used optimization approaches such as Bregman / Frank–Wolfe style projections) and trade the violation.
+
+### Reality check
+
+- Harder engineering than 5m Up/Down sniping
+- Opportunities can be larger but less frequent
+- Model risk is real: wrong constraint definition = false arb
+
+**Best for:** research desks and multi-market engines, not first-time bot builders.
+
+---
+
+## 12. AI Probability / Information Arbitrage
+
+### Core idea
+
+Markets can be slow to reprice public information. AI / ensemble systems ingest headlines, polls, on-chain data, or structured context, estimate a fair probability, and trade when Polymarket’s price is still stale.
+
+### Typical stack
+
+1. News / social / data ingestion
+2. Multiple models → ensemble fair odds
+3. Compare to Polymarket mid
+4. Trade only when edge > threshold and liquidity is real
+5. Exit on reprice or time stop
+
+### Important honesty
+
+This is **not** magic alpha. It is speed + calibration + execution. On ultra-short 5m BTC binaries, some live experiments show directional AI agents can struggle because the series is extremely noisy. AI tends to shine more on **information-heavy**, longer-horizon markets — while still needing hard risk limits.
+
+**Best for:** event-driven markets (politics, macro, sports) and hybrid systems that use AI as a filter, not as an unchecked autopilot.
+
+---
+
+## How These Strategies Fit Together
+
+Serious Polymarket bot portfolios often combine modules:
+
+| Layer | Strategies |
+|-------|------------|
+| **Structural / neutral** | Complement arb, 101¢ maker, ladder MM, dual-side hedge |
+| **Execution quality** | Stair exits, inventory caps, force-hedge |
+| **Speed** | Latency / oracle arb, HF momentum |
+| **Late-window harvest** | Endcycle sniper |
+| **Research / info** | Imbalance, logical multi-outcome, AI probability |
+
+The featured system on this page emphasizes **endcycle sniping** on BTC/ETH/SOL/XRP 5m markets — a practical, understandable, and publicly verifiable style of edge — while the catalog above shows the broader competitive landscape.
+
+---
+
+## Why This Bot
+
+This project is built to help traders understand what a real **Polymarket arbitrage trading bot** looks like in practice:
+
+- Polymarket trading bots on short-interval crypto markets
+- Prediction market automation beyond manual clicking
+- Late-window / endcycle sniper systems with public on-chain proof
+- Buy → redeem settlement loops on Polygon
+- A clear map of the major bot strategies competing on Polymarket in 2026
+
+If you want to discuss strategy design, custom bots, or see live behavior, contact me on Telegram: [@antsaslyku](https://t.me/antsaslyku).
 
 ---
 
 ## Risks & Disclaimer
 
-- **Small edge, large tail risk** — ~$0.02/share at $0.98 entry; one reversal can erase many wins.
-- **Not every window trades** — many cycles never hit 0.97–0.99 in time.
-- **This repo simulates P/L** — live trading requires CLOB order placement and real fills; past on-chain results ([@antsaslyku](https://polymarket.com/@antsaslyku)) do not guarantee future performance.
-- **Not financial advice** — use at your own risk.
-
----
-
-## Project Layout
-
-```
-Polymarket-arbitrage-bot/
-├── doc/              # Screenshots & banner (Polymarket profile P/L)
-│   ├── banner.png
-│   ├── activity.png
-│   └── daily_pnl.png
-├── src/index.ts      # Bot logic and strategy constants
-├── .env.example      # Environment template
-├── logs.txt          # Runtime logs (created on start)
-├── package.json
-└── tsconfig.json
-```
+- **Small edges, large tails** — a 1–2¢ theoretical edge can vanish after fees, slippage, and one bad flip
+- **Competition is intense** — many pure arb prints are taken by faster bots
+- **Not every window trades** — endcycle setups often skip cycles when no side reaches 0.97–0.99
+- **Past results are not future guarantees** — see [@antsaslyku](https://polymarket.com/@antsaslyku) as illustration, not a promise
+- **Not financial advice** — trading prediction markets involves substantial risk of loss
 
 ---
 
 ## Roadmap
 
-- Stronger profitable strategy variants (multi-threshold, adaptive sizing)
-- Live CLOB order placement mode (beyond simulation)
+- Stronger endcycle variants (multi-threshold, adaptive sizing)
+- Complement + latency arb modules
+- Ladder / 101¢ maker + stair exit engine
 - Telegram trading alerts
-- Multi-market arbitrage engine
-- Additional sniper / ladder / momentum strategy modules
-- Cloud deployment automation
 - Real-time analytics dashboard
-
----
-
-## Contributing
-
-Contributions, pull requests, and strategy ideas are welcome.
+- Cloud deployment automation
 
 ---
 
 ## SEO Keywords
 
-Polymarket trading bot, Polymarket arbitrage bot, Polymarket endcycle sniper, prediction market bot, crypto arbitrage bot, automated trading system, algorithmic trading TypeScript, Polymarket API, 5-minute crypto Up/Down bot, market-making bot, Polymarket trading strategy, automated trading system architecture
+Polymarket trading bot, Polymarket arbitrage bot, Polymarket endcycle sniper, complement arbitrage, latency arbitrage, 101 cents maker, ladder market making, stair arbitrage, lost token sniper, dual-side arbitrage, momentum trading bot, imbalance arbitrage, prediction market bot, 5-minute crypto Up/Down bot, Polymarket CLOB bot, algorithmic trading Polygon
 
 ---
 
 ## License
 
-This project is open source and available under the ISC License.
+ISC License
