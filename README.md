@@ -11,7 +11,7 @@ I build, deploy, and support Polymarket bots that scan and trade **politics, wea
 
 **Live profile:** [**@moond on Polymarket**](https://polymarket.com/@moond)
 
-**Telegram:** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord:** cryptomoonday · **Author:** [@trum3it](https://github.com/trum3it)
+**Telegram:** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord:** cryptomoonday · **Author:** [@cryptomoonday](https://github.com/cryptomoonday)
 
 ---
 
@@ -94,7 +94,7 @@ I provide **Polymarket arbitrage bot tools and services** across many market typ
 |---------|------|
 | **Telegram** | [@cryptomoonday23](https://t.me/cryptomoonday23) |
 | **Discord** | cryptomoonday |
-| **GitHub** | [@trum3it](https://github.com/trum3it) |
+| **GitHub** | [@cryptomoonday](https://github.com/cryptomoonday) |
 | **Polymarket** | [@moond](https://polymarket.com/@moond) |
 
 Public live account:

@@ -11,7 +11,7 @@
 
 **实盘主页：** [**@moond on Polymarket**](https://polymarket.com/@moond)
 
-**Telegram：** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord：** cryptomoonday · **作者：** [@trum3it](https://github.com/trum3it)
+**Telegram：** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord：** cryptomoonday · **作者：** [@cryptomoonday](https://github.com/cryptomoonday)
 
 ---
 
@@ -92,7 +92,7 @@
 |------|------|
 | **Telegram** | [@cryptomoonday23](https://t.me/cryptomoonday23) |
 | **Discord** | cryptomoonday |
-| **GitHub** | [@trum3it](https://github.com/trum3it) |
+| **GitHub** | [@cryptomoonday](https://github.com/cryptomoonday) |
 | **Polymarket** | [@moond](https://polymarket.com/@moond) |
 
 公开实盘账户：
