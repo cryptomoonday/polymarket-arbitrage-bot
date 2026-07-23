@@ -1,22 +1,26 @@
-# Polymarket 交易机器人 | Polymarket 套利机器人工具与服务
+# Polymarket 套利机器人 | Polymarket Arbitrage Bot
 
 **语言 / Language / Язык:** [English](README.md) | 中文 | [Русский](README.ru.md)
 
-专业的 **Polymarket 套利机器人工具与服务**，面向自动化交易 **真实世界事件市场** — 不局限于加密货币。
+**Polymarket 套利机器人（Polymarket arbitrage bot）** 工具与服务，用于在 Polymarket 预测市场上自动交易 — 政治、体育、天气、加密、经济、娱乐等。
 
-我构建、部署并支持可扫描与交易 **政治、天气、体育、加密、经济、娱乐等** 类别的 Polymarket 机器人。只要 Polymarket 上有 YES/NO 或多结果事件市场，就能接入同一套利栈：发现错价 → 风险定仓 → CLOB 执行 → 结算赎回。
+本 **Polymarket arbitrage bot** 扫描事件市场中的 YES/NO 与多结果错价，完成定仓、CLOB 执行，并在 Polygon 结算赎回。不局限于加密：同一套 **Polymarket 套利** 栈覆盖各大事件品类。
+
+### 什么是 Polymarket 套利机器人？
+
+**Polymarket arbitrage bot** 是自动捕捉 Polymarket 定价低效的软件 — 例如 YES+NO 卖价之和低于 $1、多结果打包低估、或相关市场违反概率约束。与方向性押注不同，**Polymarket 套利交易机器人** 瞄准结构性优势：互补套利、打包套利、逻辑/嵌套套利、延迟套利与做市类策略。
 
 ![Polymarket Arbitrage Bot Banner](doc/banner.png)
 
-**实盘主页：** [**@moond on Polymarket**](https://polymarket.com/@moond)
+**Polymarket 套利机器人实盘主页：** [**@moond on Polymarket**](https://polymarket.com/@moond)
 
 **Telegram：** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord：** cryptomoonday · **作者：** [@cryptomoonday](https://github.com/cryptomoonday)
 
 ---
 
-## 我们覆盖的市场
+## Polymarket 套利机器人覆盖的市场
 
-主流 Polymarket 类别均可提供机器人工具与定制服务：
+主流 Polymarket 品类均可接入本 **Polymarket arbitrage bot** 与定制套利服务：
 
 | 类别 | 示例市场 | 典型机器人重点 |
 |------|----------|----------------|
@@ -33,33 +37,33 @@
 
 ---
 
-## 我提供什么（工具与服务）
+## Polymarket 套利机器人工具与服务
 
-- 面向二元 + 多结果市场的 **现成套利机器人模块**
-- 按你的赛道定制策略（政治、体育直播、天气量化、加密短窗等）
-- 监控数百个事件盘口的 **多市场扫描器**（YES+NO / 打包 / 逻辑缺口）
+- **现成 Polymarket arbitrage bot 模块**（二元 + 多结果）
+- **定制 Polymarket 套利策略**（政治、体育直播、天气量化、加密短窗等）
+- **多市场 Polymarket 套利扫描器**（YES+NO / 打包 / 逻辑缺口）
 - **执行 + 风控层** — 滑点上限、库存限制、自动赎回
 - **监控与提醒**（Telegram）：成交、跳过、回撤、结算
-- **咨询**：架构、VPS/RPC、钱包、策略选型
+- **咨询**：Polymarket 套利机器人架构、VPS/RPC、钱包、策略选型
 
 ![服务流程](doc/services-pipeline.png)
 
-无论你要 **单一品类** 机器人，还是 **跨全站垂直领域** 的组合栈，欢迎 Telegram 联系：[@cryptomoonday23](https://t.me/cryptomoonday23)，或 Discord：**cryptomoonday**。
+需要单品类或全市场 **Polymarket arbitrage bot**？Telegram：[@cryptomoonday23](https://t.me/cryptomoonday23)，或 Discord：**cryptomoonday**。
 
 ---
 
-## 功能亮点
+## Polymarket 套利机器人功能
 
-- 面向 **事件驱动** 的 Polymarket 市场：政治、体育、天气、加密等
-- 核心优势：**互补套利**、**多结果打包套利**、**逻辑/嵌套套利**、**做市**、**信息/催化剂滞后**、**尾盘热门**
-- 实时 CLOB 监控 + Polygon 上自动买入 → 合并/赎回
-- 可配置宇宙：指定 slug、标签或整类市场
-- 公开主页实盘证明
-- 按品类划分的策略手册，便于理解政治 vs 体育 vs 天气 vs 加密的差异
+- 面向事件市场的生产级 **Polymarket arbitrage bot**（政治、体育、天气、加密等）
+- 核心 **Polymarket 套利** 优势：互补、多结果打包、逻辑/嵌套、做市、催化剂滞后、尾盘热门
+- 实时 CLOB 监控 + Polygon 自动买入 → 合并/赎回
+- 可配置宇宙：slug、标签或整类市场
+- 运行中的 Polymarket 套利机器人实盘证明
+- 按品类映射各 **Polymarket 套利** 方法的策略手册
 
 ---
 
-## 策略目录（跨市场）
+## Polymarket 套利机器人策略
 
 | # | 策略 | 更适合 | 典型优势 |
 |---|------|--------|----------|
@@ -80,9 +84,9 @@
 
 ---
 
-## 联系方式
+## 联系 — Polymarket 套利机器人
 
-我提供覆盖多品类的 **Polymarket 套利机器人工具与服务**。政治扫描、体育直播组合引擎、天气模型叠加、加密短窗模块，或完整多品类栈 — 都可以设计、交付与调优。
+我提供覆盖多品类的 **Polymarket arbitrage bot** 工具与服务。政治扫描、体育直播组合引擎、天气模型叠加、加密短窗模块，或完整多品类栈 — 都可以设计、交付与调优。
 
 | 渠道 | 链接 |
 |------|------|
@@ -99,9 +103,9 @@
 
 ---
 
-## 实盘证明
+## 实盘证明 — Polymarket 套利机器人
 
-来自 [@moond](https://polymarket.com/@moond) 的自动买入 → 赎回与组合活动。同一结算闭环适用于各类事件市场：政治、体育、天气、加密等。
+来自 [@moond](https://polymarket.com/@moond) 的 **Polymarket arbitrage bot** 自动买入 → 赎回与组合活动。同一结算闭环适用于各类事件市场：政治、体育、天气、加密等。
 
 ![@moond 主页概览](doc/moond-profile.png)
 
@@ -293,7 +297,7 @@
 
 ---
 
-## 为什么 2026 年多市场 Polymarket 套利很重要
+## 为什么 2026 年需要 Polymarket 套利机器人
 
 Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
@@ -314,7 +318,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 ---
 
-## 核心策略手册（适用各类事件）
+## Polymarket 套利机器人策略手册
 
 ### 1. 二元互补套利（YES + NO < $1）
 
@@ -346,7 +350,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 ---
 
-## 按市场品类的策略
+## 按品类的 Polymarket 套利策略
 
 ### 政治
 
@@ -415,7 +419,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 ---
 
-## 多市场套利栈如何组合
+## Polymarket 套利机器人技术栈如何组合
 
 | 层级 | 作用 |
 |------|------|
@@ -430,15 +434,15 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 ---
 
-## 为什么找我
+## 为什么选择这套 Polymarket 套利机器人
 
-本项目帮助交易者与运营方获得覆盖全事件光谱的 **Polymarket 套利机器人工具与服务**：
+本项目帮助交易者与运营方获得真正的 **Polymarket arbitrage bot** — 工具、策略与服务，覆盖全事件光谱：
 
-- 不锁死在仅加密策略
-- 政治、天气、体育、加密、宏观等 — **全部可用**
-- 按品类清晰的策略地图
+- 首先定位为 **Polymarket 套利机器人**，而非通用玩具脚本
+- 政治、天气、体育、加密、宏观等 — **全部可用于 Polymarket 套利**
+- 按品类清晰的策略地图，明确你买的是哪种 **Polymarket 套利** 方法
 - 实盘主页：[@moond](https://polymarket.com/@moond)
-- 定制构建、扫描器、执行引擎与持续调优
+- 定制 Polymarket arbitrage bot 构建、扫描器、执行引擎与持续调优
 
 Telegram：[@cryptomoonday23](https://t.me/cryptomoonday23) · Discord：**cryptomoonday**
 
@@ -469,7 +473,13 @@ Telegram：[@cryptomoonday23](https://t.me/cryptomoonday23) · Discord：**crypt
 
 ## SEO 关键词
 
-Polymarket 套利机器人, Polymarket 交易机器人工具, Polymarket 机器人服务, 政治套利 Polymarket, 体育组合套利, 天气交易机器人, 多结果打包套利, 逻辑嵌套套利, 互补套利, Polymarket 做市, 预测市场机器人, 事件市场交易机器人, 选举交易机器人
+**主关键词：** Polymarket 套利机器人, Polymarket arbitrage bot, Polymarket 套利, Polymarket arbitrage trading bot
+
+**次关键词：** Polymarket 交易机器人, Polymarket 机器人, 预测市场套利机器人, Polymarket CLOB 套利, 自动 Polymarket 套利
+
+**长尾 / 策略：** 互补套利 Polymarket, YES NO 套利机器人, 多结果打包套利, 逻辑嵌套套利 Polymarket, 体育组合套利 Polymarket, 政治套利机器人 Polymarket, 天气套利 Polymarket, 延迟预言机套利 Polymarket, Polymarket 做市机器人, Polymarket 尾盘狙击, 选举套利机器人 Polymarket, NBA Polymarket 套利
+
+**服务：** Polymarket 套利机器人工具, Polymarket 套利机器人服务, 定制 Polymarket arbitrage bot, 雇佣 Polymarket 套利机器人开发
 
 ---
 

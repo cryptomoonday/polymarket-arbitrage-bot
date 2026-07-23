@@ -1,22 +1,26 @@
-# Polymarket Trading Bot | Инструменты и сервисы арбитражных ботов Polymarket
+# Polymarket Arbitrage Bot | Арбитражный бот Polymarket
 
 **Язык / Language / 语言:** [English](README.md) | [中文](README.zh-CN.md) | Русский
 
-Профессиональные **инструменты и сервисы арбитражных ботов Polymarket** для автоматизированной торговли на **рынках реальных событий** — не только крипто.
+**Polymarket arbitrage bot** — инструменты и сервисы для автоматической торговли на рынках прогнозов Polymarket: политика, спорт, погода, крипто, экономика, развлечения и др.
 
-Я создаю, внедряю и сопровождаю ботов Polymarket, которые сканируют и торгуют **политику, погоду, спорт, крипто, экономику, развлечения и многое другое**. Если у события есть YES/NO или multi-outcome рынок на Polymarket, его можно подключить к одному арбитражному стеку: найти mispricing → рассчитать риск → исполнить на CLOB → redeem после settlement.
+Этот **Polymarket arbitrage bot** сканирует event-рынки на mispriced YES/NO и multi-outcome контракты, считает риск, исполняет на Polymarket CLOB и делает redeem после settlement на Polygon. Не только крипто: один и тот же стек **Polymarket арбитража** работает по всем основным категориям событий.
+
+### Что такое Polymarket arbitrage bot?
+
+**Polymarket arbitrage bot** — это ПО, которое автоматически извлекает прибыль из ценовых неэффективностей на Polymarket — например, когда сумма ask YES + NO ниже $1, когда multi-outcome бандлы недооценены, или когда связанные рынки нарушают вероятностные constraints. В отличие от направленной ставки, **Polymarket arbitrage trading bot** нацелен на структурные края: complement arb, bundle arb, logical/nested arb, latency arb и maker-стратегии ликвидности.
 
 ![Polymarket Arbitrage Bot Banner](doc/banner.png)
 
-**Живой профиль:** [**@moond on Polymarket**](https://polymarket.com/@moond)
+**Живой профиль Polymarket arbitrage bot:** [**@moond on Polymarket**](https://polymarket.com/@moond)
 
 **Telegram:** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord:** cryptomoonday · **Автор:** [@cryptomoonday](https://github.com/cryptomoonday)
 
 ---
 
-## Рынки, которые мы обслуживаем
+## Рынки Polymarket Arbitrage Bot
 
-Все основные категории Polymarket доступны для бот-инструментов и кастомных сервисов:
+Все основные категории Polymarket доступны для этого **Polymarket arbitrage bot** и кастомных арбитражных сервисов:
 
 | Категория | Примеры рынков | Фокус бота |
 |-----------|----------------|------------|
@@ -33,33 +37,33 @@
 
 ---
 
-## Что я предлагаю (Tools & Services)
+## Инструменты и сервисы Polymarket Arbitrage Bot
 
-- **Готовые арбитражные модули** для binary + multi-outcome рынков Polymarket
-- **Кастомные стратегии** под нишу (политика, live-спорт, weather quant, crypto short windows)
-- **Мультирыночные сканеры** сотен event-стаканов на YES+NO / bundle / logical gaps
+- **Готовые модули Polymarket arbitrage bot** для binary + multi-outcome рынков
+- **Кастомные стратегии Polymarket арбитража** под нишу (политика, live-спорт, weather quant, crypto short windows)
+- **Мультирыночные сканеры Polymarket арбитража** на YES+NO / bundle / logical gaps
 - **Execution + risk** — slippage caps, inventory limits, auto-redeem
 - **Мониторинг и алерты** (Telegram): fills, skips, drawdowns, resolution
-- **Консалтинг** по архитектуре, VPS/RPC, кошелькам и выбору стратегии
+- **Консалтинг** по архитектуре Polymarket arbitrage bot, VPS/RPC, кошелькам и выбору стратегии
 
 ![Пайплайн сервисов](doc/services-pipeline.png)
 
-Нужен бот для **одной категории** или портфель **по всем вертикалям Polymarket** — пишите в Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) или Discord: **cryptomoonday**.
+Нужен **Polymarket arbitrage bot** для одной категории или по всем вертикалям — пишите в Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) или Discord: **cryptomoonday**.
 
 ---
 
-## Возможности
+## Возможности Polymarket Arbitrage Bot
 
-- Событийные рынки Polymarket: политика, спорт, погода, крипто и др.
-- Ключевые края: **complement arb**, **multi-outcome bundle**, **logical / nested arb**, **market making**, **info / catalyst lag**, **late-window favorites**
+- Продакшн **Polymarket arbitrage bot** для event-рынков: политика, спорт, погода, крипто и др.
+- Ключевые края **Polymarket арбитража**: complement, multi-outcome bundle, logical / nested, market making, catalyst lag, late-window favorites
 - Real-time CLOB + автоматический цикл buy → merge/redeem на Polygon
 - Настраиваемая вселенная: slug’и, теги или целые категории
-- Публичное live-доказательство
-- Стратегические плейбуки по типам рынков
+- Live-доказательство работающего Polymarket arbitrage bot
+- Плейбуки, которые мапят методы **Polymarket арбитража** по категориям
 
 ---
 
-## Каталог стратегий (кросс-маркет)
+## Стратегии Polymarket Arbitrage Bot
 
 | # | Стратегия | Лучше на | Типичный край |
 |---|-----------|----------|---------------|
@@ -80,9 +84,9 @@
 
 ---
 
-## Контакты
+## Контакты — Polymarket Arbitrage Bot
 
-Я предоставляю **инструменты и сервисы арбитражных ботов Polymarket** по многим типам рынков. Политический сканер, live sports combinatorial engine, weather-model overlay, crypto short-window modules или полный multi-category стек — могу спроектировать, поставить и настроить.
+Я предоставляю инструменты и сервисы **Polymarket arbitrage bot** по многим типам рынков. Политический сканер, live sports combinatorial engine, weather-model overlay, crypto short-window modules или полный multi-category стек — могу спроектировать, поставить и настроить.
 
 | Канал | Ссылка |
 |-------|--------|
@@ -99,9 +103,9 @@
 
 ---
 
-## Живое доказательство
+## Живое доказательство — Polymarket Arbitrage Bot
 
-Автоматические циклы buy → redeem и активность портфеля с [@moond](https://polymarket.com/@moond). Тот же settlement-loop работает для event-рынков любого типа: политика, спорт, погода, крипто и дальше.
+Автоматический цикл buy → redeem и портфельная активность **Polymarket arbitrage bot** с [@moond](https://polymarket.com/@moond). Один и тот же settlement-цикл работает на политике, спорте, погоде, крипто и др.
 
 ![@moond profile overview](doc/moond-profile.png)
 
@@ -293,7 +297,7 @@
 
 ---
 
-## Почему мультирыночный арбитраж Polymarket важен в 2026
+## Почему Polymarket Arbitrage Bot важен в 2026
 
 Polymarket — это уже не «только crypto Up/Down». Объём и неэффективности видны в:
 
@@ -314,7 +318,7 @@ Polymarket — это уже не «только crypto Up/Down». Объём и
 
 ---
 
-## Базовые плейбуки стратегий (для всех событий)
+## Плейбуки Polymarket Arbitrage Bot
 
 ### 1. Binary Complement Arbitrage (YES + NO < $1)
 
@@ -346,7 +350,7 @@ Polymarket — это уже не «только crypto Up/Down». Объём и
 
 ---
 
-## Стратегии по категориям рынков
+## Стратегии Polymarket арбитража по категориям рынков
 
 ### Политика
 
@@ -415,7 +419,7 @@ Polymarket — это уже не «только crypto Up/Down». Объём и
 
 ---
 
-## Как собирается multi-market arb стек
+## Как собирается стек Polymarket Arbitrage Bot
 
 | Слой | Роль |
 |------|------|
@@ -430,15 +434,15 @@ Polymarket — это уже не «только crypto Up/Down». Объём и
 
 ---
 
-## Почему работать со мной
+## Почему выбрать этот Polymarket Arbitrage Bot
 
-Проект помогает получить реальные **инструменты и сервисы арбитражных ботов Polymarket** по всему спектру событий:
+Проект помогает получить реальный **Polymarket arbitrage bot** — инструменты, стратегии и сервисы — по всему спектру событий:
 
-- Не заперты в crypto-only стратегиях
-- Политика, погода, спорт, крипто, макро и др. — **всё доступно**
-- Понятные карты стратегий по категориям
+- Сначала как **Polymarket arbitrage bot**, а не generic trading toy
+- Политика, погода, спорт, крипто, макро и др. — **всё доступно** для Polymarket арбитража
+- Понятные карты стратегий по категориям: какой метод **Polymarket арбитража** вы покупаете
 - Live-профиль: [@moond](https://polymarket.com/@moond)
-- Кастомные сборки, сканеры, execution engines и тюнинг
+- Кастомные сборки Polymarket arbitrage bot, сканеры, execution engines и тюнинг
 
 Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord: **cryptomoonday**
 
@@ -469,7 +473,13 @@ Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord: **cryptom
 
 ## SEO Keywords
 
-Polymarket arbitrage bot, инструменты ботов Polymarket, сервисы арбитража Polymarket, politics arbitrage, sports combinatorial arbitrage, weather trading bot, multi-outcome bundle, logical nested arbitrage, complement arbitrage, prediction market bot, арбитражный бот Polymarket, бот для рынков событий
+**Primary:** Polymarket arbitrage bot, Polymarket арбитраж, Polymarket arbitrage trading bot, арбитражный бот Polymarket
+
+**Secondary:** Polymarket trading bot, бот Polymarket, prediction market arbitrage bot, Polymarket CLOB арбитраж, автоматический арбитраж Polymarket
+
+**Long-tail / strategy:** complement arbitrage Polymarket, YES NO арбитражный бот, multi-outcome bundle arbitrage, logical nested arbitrage Polymarket, sports combinatorial arbitrage Polymarket, politics arbitrage bot Polymarket, weather arbitrage Polymarket, latency oracle arbitrage Polymarket, Polymarket market making bot, election arbitrage bot Polymarket, NBA Polymarket арбитраж
+
+**Services:** инструменты Polymarket arbitrage bot, сервисы Polymarket arbitrage bot, кастомный Polymarket arbitrage bot, разработчик арбитражного бота Polymarket
 
 ---
 

@@ -1,22 +1,26 @@
-# Polymarket Trading Bot | Polymarket Arbitrage Bot Tools & Services
+# Polymarket Arbitrage Bot | Automated Polymarket Trading Bot
 
 **Language / 语言 / Язык:** English | [中文](README.zh-CN.md) | [Русский](README.ru.md)
 
-Professional **Polymarket arbitrage bot tools and services** for automated trading across **real-world event markets** — not crypto-only.
+**Polymarket arbitrage bot** tools and services for automated trading on Polymarket prediction markets — politics, sports, weather, crypto, economics, entertainment, and more.
 
-I build, deploy, and support Polymarket bots that scan and trade **politics, weather, sports, crypto, economics, entertainment, and more**. If an event has a YES/NO or multi-outcome market on Polymarket, it can be wired into the same arbitrage stack: detect mispricing → size risk → execute on the CLOB → redeem at settlement.
+This **Polymarket arbitrage bot** scans event markets for mispriced YES/NO and multi-outcome contracts, sizes risk, executes on the Polymarket CLOB, and redeems at settlement on Polygon. Not crypto-only: the same **Polymarket arbitrage** stack works across every major event category.
+
+### What is a Polymarket arbitrage bot?
+
+A **Polymarket arbitrage bot** is automated software that profits from pricing inefficiencies on Polymarket — for example when YES + NO asks sum below $1, when multi-outcome bundles are underpriced, or when related markets violate probability constraints. Unlike directional betting, a **Polymarket arbitrage trading bot** targets structural edges: complement arb, bundle arb, logical/nested arb, latency arb, and maker-style liquidity strategies.
 
 ![Polymarket Arbitrage Bot Banner](doc/banner.png)
 
-**Live profile:** [**@moond on Polymarket**](https://polymarket.com/@moond)
+**Live Polymarket arbitrage bot profile:** [**@moond on Polymarket**](https://polymarket.com/@moond)
 
 **Telegram:** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord:** cryptomoonday · **Author:** [@cryptomoonday](https://github.com/cryptomoonday)
 
 ---
 
-## Markets We Serve
+## Polymarket Arbitrage Bot Markets
 
-All major Polymarket categories are available for bot tooling and custom services:
+All major Polymarket categories are available for this **Polymarket arbitrage bot** and custom arbitrage services:
 
 | Category | Example markets | Typical bot focus |
 |----------|-----------------|-------------------|
@@ -33,35 +37,35 @@ All major Polymarket categories are available for bot tooling and custom service
 
 ---
 
-## What I Offer (Tools & Services)
+## Polymarket Arbitrage Bot Tools & Services
 
-- **Ready arbitrage bot modules** for binary + multi-outcome Polymarket markets
-- **Custom strategy builds** tuned to your niche (politics specialists, sports live desks, weather quant, etc.)
-- **Multi-market scanners** that watch hundreds of event books for YES+NO / bundle / logical gaps
+- **Ready Polymarket arbitrage bot modules** for binary + multi-outcome markets
+- **Custom Polymarket arbitrage strategies** tuned to your niche (politics, sports live, weather quant, crypto short windows)
+- **Multi-market Polymarket arbitrage scanners** for YES+NO / bundle / logical gaps
 - **Execution + risk layers** — slippage caps, inventory limits, redeem automation
 - **Monitoring & alerts** (Telegram) for fills, skips, drawdowns, and resolution
-- **Consulting** on architecture, VPS/RPC, wallet setup, and strategy selection
+- **Consulting** on Polymarket arbitrage bot architecture, VPS/RPC, wallet setup, and strategy selection
 
 ![Services pipeline](doc/services-pipeline.png)
 
-If you want a bot for **one category** or a **portfolio across all Polymarket verticals**, reach out on Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) or Discord: **cryptomoonday**.
+Looking for a **Polymarket arbitrage bot** for one category or a full multi-market portfolio? Contact Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) or Discord: **cryptomoonday**.
 
 ---
 
-## Features
+## Polymarket Arbitrage Bot Features
 
-- Built for **event-driven Polymarket markets** across politics, sports, weather, crypto, and more
-- Core edges: **complement arb**, **multi-outcome bundle arb**, **logical / nested arb**, **market making**, **info / catalyst lag**, **late-window favorites**
-- Real-time CLOB monitoring + automated buy → merge/redeem settlement loops on Polygon
-- Configurable universe: follow specific slugs, tags, or whole categories
-- Proven live activity with public profile proof
-- Strategy playbooks by market type so you can see what actually fits politics vs sports vs weather vs crypto
+- Built as a production **Polymarket arbitrage bot** for event-driven markets (politics, sports, weather, crypto, and more)
+- Core **Polymarket arbitrage** edges: complement arb, multi-outcome bundle arb, logical / nested arb, market making, catalyst lag, late-window favorites
+- Real-time CLOB monitoring + automated buy → merge/redeem settlement on Polygon
+- Configurable universe: slugs, tags, or whole Polymarket categories
+- Live proof from a running Polymarket arbitrage bot profile
+- Strategy playbooks so you can map each **Polymarket arbitrage** method to the right market type
 
 ---
 
-## Strategy Catalog (Cross-Market)
+## Polymarket Arbitrage Bot Strategies
 
-Polymarket’s CLOB is bot-heavy. Simple gaps often last seconds. Serious systems run **structural arb + category-specific overlays**.
+The Polymarket CLOB is bot-heavy. Simple gaps often last seconds. A serious **Polymarket arbitrage bot** runs structural arb plus category-specific overlays:
 
 | # | Strategy | Best on | Typical edge |
 |---|----------|---------|--------------|
@@ -82,9 +86,9 @@ Polymarket’s CLOB is bot-heavy. Simple gaps often last seconds. Serious system
 
 ---
 
-## Contact
+## Contact — Polymarket Arbitrage Bot
 
-I provide **Polymarket arbitrage bot tools and services** across many market types. Whether you need a politics desk scanner, a live sports combinatorial engine, a weather model overlay, crypto short-window modules, or a full multi-category stack — I can help design, ship, and tune it.
+I provide **Polymarket arbitrage bot** tools and custom **Polymarket arbitrage** services across many market types — politics scanners, sports combinatorial engines, weather model overlays, crypto short-window modules, or a full multi-category **Polymarket arbitrage bot** stack.
 
 | Channel | Link |
 |---------|------|
@@ -101,9 +105,9 @@ Public live account:
 
 ---
 
-## Live Proof
+## Live Proof — Polymarket Arbitrage Bot
 
-Automated buy → redeem cycles and portfolio activity from [@moond](https://polymarket.com/@moond). The same settlement loop powers event markets of every type: politics, sports, weather, crypto, and beyond.
+Automated buy → redeem cycles from a live **Polymarket arbitrage bot** profile ([@moond](https://polymarket.com/@moond)). The same settlement loop powers Polymarket arbitrage across politics, sports, weather, crypto, and beyond.
 
 ![@moond profile overview](doc/moond-profile.png)
 
@@ -295,9 +299,9 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 ---
 
-## Why Multi-Market Polymarket Arbitrage Matters in 2026
+## Why a Polymarket Arbitrage Bot Matters in 2026
 
-Polymarket is no longer “just crypto Up/Down.” Volume and inefficiency show up across:
+A modern **Polymarket arbitrage bot** is no longer “just crypto Up/Down.” Volume and inefficiency show up across:
 
 - **Elections & politics** — nested state/national markets create logical constraints
 - **Sports** — moneyline vs spread/combinatorial books misprice during live play
@@ -316,13 +320,13 @@ Research and industry write-ups in 2025–2026 repeatedly highlight:
 
 ---
 
-## Core Strategy Playbooks (All Events)
+## Polymarket Arbitrage Bot Playbooks
 
-### 1. Binary Complement Arbitrage (YES + NO < $1)
+### 1. Binary Complement Arbitrage (YES + NO < $1) — Core Polymarket Arbitrage Bot Strategy
 
-Works on **any** binary event: “Will X win?”, “Will temp exceed Y?”, “Will Team A win?”
+Works on **any** binary Polymarket event: “Will X win?”, “Will temp exceed Y?”, “Will Team A win?”
 
-If `ask_YES + ask_NO < 1.00` (after fees/edge buffer), buy both sides and lock structural profit at resolution.
+If `ask_YES + ask_NO < 1.00` (after fees/edge buffer), a **Polymarket arbitrage bot** buys both sides and locks structural profit at resolution.
 
 ![Complement arb diagram](doc/diagram-complement-arb.png)
 
@@ -360,7 +364,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 ---
 
-## Strategies by Market Category
+## Polymarket Arbitrage Strategies by Market Category
 
 ### Politics
 
@@ -450,7 +454,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 ---
 
-## How a Multi-Market Arb Stack Fits Together
+## How a Polymarket Arbitrage Bot Stack Fits Together
 
 | Layer | Role |
 |-------|------|
@@ -465,15 +469,15 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 ---
 
-## Why Work With Me
+## Why Choose This Polymarket Arbitrage Bot
 
-This project exists to help traders and operators get real **Polymarket arbitrage bot tools and services** across the full event spectrum:
+This project helps traders and operators get a real **Polymarket arbitrage bot** — tools, strategies, and services — across the full event spectrum:
 
-- Not locked to crypto-only strategies
-- Politics, weather, sports, crypto, macro, and more — **all available**
-- Clear strategy maps per category so you know what you’re buying
+- Built first as a **Polymarket arbitrage bot**, not a generic trading toy
+- Politics, weather, sports, crypto, macro, and more — **all available** for Polymarket arbitrage
+- Clear strategy maps per category so you know which **Polymarket arbitrage** method you are buying
 - Live profile proof: [@moond](https://polymarket.com/@moond)
-- Custom builds, scanners, execution engines, and ongoing tuning
+- Custom Polymarket arbitrage bot builds, scanners, execution engines, and ongoing tuning
 
 Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord: **cryptomoonday**
 
@@ -504,7 +508,13 @@ Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord: **cryptom
 
 ## SEO Keywords
 
-Polymarket arbitrage bot, Polymarket trading bot tools, Polymarket bot services, politics arbitrage Polymarket, sports combinatorial arbitrage, weather trading bot Polymarket, multi-outcome bundle arbitrage, logical nested arbitrage, complement arbitrage, market making Polymarket, prediction market bot, event market trading bot, Polymarket CLOB bot, election trading bot, NBA Polymarket arb
+**Primary:** Polymarket arbitrage bot, Polymarket arbitrage, Polymarket arbitrage trading bot
+
+**Secondary:** Polymarket trading bot, Polymarket bot, prediction market arbitrage bot, Polymarket CLOB arbitrage, automated Polymarket arbitrage
+
+**Long-tail / strategy:** complement arbitrage Polymarket, YES NO arbitrage bot, multi-outcome bundle arbitrage, logical nested arbitrage Polymarket, sports combinatorial arbitrage Polymarket, politics arbitrage bot Polymarket, weather arbitrage Polymarket, latency oracle arbitrage Polymarket, Polymarket market making bot, Polymarket endcycle sniper, election arbitrage bot Polymarket, NBA Polymarket arbitrage
+
+**Services:** Polymarket arbitrage bot tools, Polymarket arbitrage bot services, custom Polymarket arbitrage bot, hire Polymarket arbitrage bot developer
 
 ---
 
