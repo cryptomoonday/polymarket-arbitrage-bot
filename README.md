@@ -113,12 +113,106 @@ Automated buy → redeem cycles and portfolio activity from [@moond](https://pol
 <!-- IMAGE PLACEHOLDER: Full Polymarket profile homepage screenshot for @moond (PnL chart + recent positions across categories). Suggested file: doc/moond-profile.png -->
 ![@moond profile overview](doc/moond-profile.png)
 
-### On-chain buy → redeem example
+### Multi-market buy → redeem activity
 
-Real Polygon transactions showing the bot settlement pattern: **enter outcome shares → redeem at $1.00 after resolution**.
+The same settlement pattern across **crypto, geopolitics, and sports**: **buy outcome shares → redeem at resolution**. Examples from live bot activity:
 
-<!-- IMAGE PLACEHOLDER: Side-by-side Polygonscan screenshots of a buy tx and a redeem tx (CTF Exchange + redeem). Suggested file: doc/onchain-buy-redeem.png -->
-![Polymarket Activity](doc/activity.png)
+| Market | Category | Buy | Redeem |
+|--------|----------|-----|--------|
+| BTC dip | Crypto | `btc-dip-buy.png` | `btc-dip-redeem.png` |
+| China–Philippines | Geopolitics | `china_philippines_buy.png` | `china_philippines_redeem.png` |
+| Goalkeeper | Sports | `goalkeeper-buy.png` | `goalkeeper-redeem.png` |
+| Mbappé | Sports | `Mbappe-buy.png` | `Mbappe-redeem.png` |
+
+#### Crypto — BTC dip
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![BTC dip — buy](doc/btc-dip-buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![BTC dip — redeem](doc/btc-dip-redeem.png)
+
+</td>
+</tr>
+</table>
+
+#### Geopolitics — China–Philippines
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![China–Philippines — buy](doc/china_philippines_buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![China–Philippines — redeem](doc/china_philippines_redeem.png)
+
+</td>
+</tr>
+</table>
+
+#### Sports — Goalkeeper
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![Goalkeeper — buy](doc/goalkeeper-buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![Goalkeeper — redeem](doc/goalkeeper-redeem.png)
+
+</td>
+</tr>
+</table>
+
+#### Sports — Mbappé
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![Mbappé — buy](doc/Mbappe-buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![Mbappé — redeem](doc/Mbappe-redeem.png)
+
+</td>
+</tr>
+</table>
+
+> **Pattern:** Each pair shows **entry into outcome shares** and **redeem after resolution** (typically back to USDC at **$1.00** per winning share via CTF settlement). Categories differ; the loop stays the same.
+
+### On-chain buy → redeem examples (Polygonscan)
+
+Additional verified Polygon transactions with the same bot settlement pattern:
 
 #### Trade 1 — Jun 11, 2026 · ~$0.99 entry
 
@@ -136,12 +230,9 @@ Real Polygon transactions showing the bot settlement pattern: **enter outcome sh
 | **Buy** | 08:55:01 | Buy near-settlement favorite @ **~$0.98–$0.99** | [View buy tx](https://polygonscan.com/tx/0x7fa58be45dc24afbc8bd135fc6a7147fb548e2c00ad2f5b6100fa7510dd58b45) |
 | **Redeem** | 08:55:30 | Resolution redeem **~29s** after buy | [View redeem tx](https://polygonscan.com/tx/0x4edaaa3a6a6d854fe6ec938280ab3cfd34d07f34fcc75c7f4757feccfc9d30dc) |
 
-> **How to read these txs:** The **buy** interacts with `Polymarket: CTF Exchange V2`. The **redeem** settles winning shares to USDC at **$1.00**. The same pipeline works for election contracts, game markets, weather thresholds, and crypto events — only the signal layer changes.
-
 ### Profile & activity screenshots
 
-<!-- IMAGE PLACEHOLDER: Daily PnL / portfolio growth chart from @moond dashboard. Suggested file: doc/daily_pnl.png -->
-![Polymarket profile — past day profit/loss and recent trades](doc/daily_pnl.png)
+![Polymarket profile — past day profit/loss and recent trades](doc/daily-pnl.png)
 
 <!-- IMAGE PLACEHOLDER: Positions list showing mixed categories (e.g. politics + sports + weather). Suggested file: doc/positions-mixed.png -->
 <!-- ![Mixed-category positions](doc/positions-mixed.png) -->
@@ -151,17 +242,17 @@ Real Polygon transactions showing the bot settlement pattern: **enter outcome sh
 
 ### Capital flow, merge & rewards gallery
 
-Screenshots of the full Polymarket money loop the bot stack supports — **deposit / withdraw**, **merge**, **liquidity & holding rewards**, and **maker / taker rebates**. Drop your captures into `doc/` using the filenames below.
+Screenshots of the full Polymarket money loop the bot stack supports — **deposit / withdraw**, **merge**, **liquidity & holding rewards**, and **maker / taker rebates**.
 
-| Action | What to capture | File |
-|--------|-----------------|------|
-| **Deposit** | Wallet / Polymarket deposit USDC (or bridge) confirmation UI | `doc/deposit.png` |
-| **Withdraw** | Withdraw / cash-out confirmation UI | `doc/withdraw.png` |
-| **Merge** | Merge YES+NO (or matched inventory) back to USDC | `doc/merge.png` |
-| **Liquidity rewards** | Liquidity rewards / LP incentives panel or claim history | `doc/liquidity-rewards.png` |
-| **Holding rewards** | Holding / staking-style rewards panel or payout history | `doc/holding-rewards.png` |
-| **Maker rebate** | Maker rebate earnings (fee rebate as maker) | `doc/maker-rebate.png` |
-| **Taker rebate** | Taker rebate earnings (fee rebate as taker, if applicable) | `doc/taker-rebate.png` |
+| Action | File |
+|--------|------|
+| **Deposit** | `doc/deposit.png` |
+| **Withdraw** | `doc/withdraw.png` |
+| **Merge** | `doc/merge.png` |
+| **Liquidity rewards** | `doc/liquidity-rewards.png` |
+| **Holding rewards** | `doc/holding-rewards.png` |
+| **Maker rebate** | `doc/maker-rebate.png` |
+| **Taker rebate** | `doc/taker-rebate.png` |
 
 #### Deposit & withdraw
 

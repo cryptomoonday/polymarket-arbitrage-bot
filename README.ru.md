@@ -111,12 +111,106 @@
 <!-- IMAGE PLACEHOLDER: Полный скрин профиля @moond (PnL + позиции по категориям). Файл: doc/moond-profile.png -->
 <!-- ![@moond profile overview](doc/moond-profile.png) -->
 
-### On-chain пример buy → redeem
+### Мультирыночная активность buy → redeem
 
-Реальные транзакции Polygon: **вход в outcome shares → redeem по $1.00 после резолюции**.
+Один и тот же settlement-паттерн по **crypto, geopolitics и sports**: **купить outcome shares → redeem после резолюции**. Примеры live-активности:
 
-<!-- IMAGE PLACEHOLDER: Side-by-side Polygonscan buy + redeem. Файл: doc/onchain-buy-redeem.png -->
-![Polymarket Activity](doc/activity.png)
+| Рынок | Категория | Buy | Redeem |
+|-------|-----------|-----|--------|
+| BTC dip | Crypto | `btc-dip-buy.png` | `btc-dip-redeem.png` |
+| China–Philippines | Geopolitics | `china_philippines_buy.png` | `china_philippines_redeem.png` |
+| Goalkeeper | Sports | `goalkeeper-buy.png` | `goalkeeper-redeem.png` |
+| Mbappé | Sports | `Mbappe-buy.png` | `Mbappe-redeem.png` |
+
+#### Crypto — BTC dip
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![BTC dip — buy](doc/btc-dip-buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![BTC dip — redeem](doc/btc-dip-redeem.png)
+
+</td>
+</tr>
+</table>
+
+#### Geopolitics — China–Philippines
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![China–Philippines — buy](doc/china_philippines_buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![China–Philippines — redeem](doc/china_philippines_redeem.png)
+
+</td>
+</tr>
+</table>
+
+#### Sports — Goalkeeper
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![Goalkeeper — buy](doc/goalkeeper-buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![Goalkeeper — redeem](doc/goalkeeper-redeem.png)
+
+</td>
+</tr>
+</table>
+
+#### Sports — Mbappé
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Buy**
+
+![Mbappé — buy](doc/Mbappe-buy.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Redeem**
+
+![Mbappé — redeem](doc/Mbappe-redeem.png)
+
+</td>
+</tr>
+</table>
+
+> **Паттерн:** каждая пара показывает **вход в outcome shares** и **redeem после резолюции** (обычно обратно в USDC по **$1.00** за выигрышный share через CTF). Категории разные — цикл один.
+
+### On-chain примеры buy → redeem (Polygonscan)
+
+Дополнительные проверенные транзакции Polygon с тем же settlement-паттерном бота:
 
 #### Сделка 1 — 11 июня 2026 · вход ~$0.99
 
@@ -134,12 +228,9 @@
 | **Buy** | 08:55:01 | Покупка near-settlement фаворита @ **~$0.98–$0.99** | [Смотреть buy](https://polygonscan.com/tx/0x7fa58be45dc24afbc8bd135fc6a7147fb548e2c00ad2f5b6100fa7510dd58b45) |
 | **Redeem** | 08:55:30 | Redeem через **~29с** после покупки | [Смотреть redeem](https://polygonscan.com/tx/0x4edaaa3a6a6d854fe6ec938280ab3cfd34d07f34fcc75c7f4757feccfc9d30dc) |
 
-> **Как читать:** **Buy** → `Polymarket: CTF Exchange V2`. **Redeem** → USDC по **$1.00**. Тот же пайплайн для выборов, матчей, погодных порогов и crypto-событий — меняется только слой сигналов.
-
 ### Скриншоты профиля и активности
 
-<!-- IMAGE PLACEHOLDER: Дневной PnL / рост портфеля @moond. Файл: doc/daily_pnl.png -->
-![Polymarket profile — past day profit/loss and recent trades](doc/daily_pnl.png)
+![Polymarket profile — past day profit/loss and recent trades](doc/daily-pnl.png)
 
 <!-- IMAGE PLACEHOLDER: Список позиций смешанных категорий. Файл: doc/positions-mixed.png -->
 <!-- ![Смешанные позиции](doc/positions-mixed.png) -->
@@ -149,17 +240,17 @@
 
 ### Галерея: капитал, merge и rewards
 
-Скриншоты полного денежного цикла Polymarket, который поддерживает бот-стек — **deposit / withdraw**, **merge**, **liquidity & holding rewards**, **maker / taker rebates**. Положите файлы в `doc/` с именами ниже.
+Скриншоты полного денежного цикла Polymarket, который поддерживает бот-стек — **deposit / withdraw**, **merge**, **liquidity & holding rewards**, **maker / taker rebates**.
 
-| Действие | Что снимать | Файл |
-|----------|-------------|------|
-| **Deposit** | UI депозита USDC (или bridge) + success | `doc/deposit.png` |
-| **Withdraw** | UI вывода / cash-out + success | `doc/withdraw.png` |
-| **Merge** | Merge YES+NO (или matched inventory) обратно в USDC | `doc/merge.png` |
-| **Liquidity rewards** | Панель LP / liquidity rewards или история claim | `doc/liquidity-rewards.png` |
-| **Holding rewards** | Панель holding rewards или история выплат | `doc/holding-rewards.png` |
-| **Maker rebate** | Доход maker rebate | `doc/maker-rebate.png` |
-| **Taker rebate** | Доход taker rebate (если применимо) | `doc/taker-rebate.png` |
+| Действие | Файл |
+|----------|------|
+| **Deposit** | `doc/deposit.png` |
+| **Withdraw** | `doc/withdraw.png` |
+| **Merge** | `doc/merge.png` |
+| **Liquidity rewards** | `doc/liquidity-rewards.png` |
+| **Holding rewards** | `doc/holding-rewards.png` |
+| **Maker rebate** | `doc/maker-rebate.png` |
+| **Taker rebate** | `doc/taker-rebate.png` |
 
 #### Deposit & withdraw
 
