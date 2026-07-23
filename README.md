@@ -31,7 +31,7 @@ All major Polymarket categories are available for bot tooling and custom service
 | **World / Other** | Conflict timelines, science, custom event contracts | Constraint arb, settlement-rule edge, long-horizon MM |
 
 <!-- IMAGE PLACEHOLDER: Infographic grid of 8 category cards (Politics, Sports, Weather, Crypto, Macro, Business, Culture, World) with small icons. Suggested file: doc/markets-grid.png -->
-<!-- ![Markets we serve](doc/markets-grid.png) -->
+![Markets we serve](doc/markets-grid.png)
 
 ---
 
@@ -45,7 +45,7 @@ All major Polymarket categories are available for bot tooling and custom service
 - **Consulting** on architecture, VPS/RPC, wallet setup, and strategy selection
 
 <!-- IMAGE PLACEHOLDER: “Services” diagram — left: You / Your capital; center: Bot stack (Scan → Filter → Size → Execute → Redeem); right: Market categories. Suggested file: doc/services-pipeline.png -->
-<!-- ![Services pipeline](doc/services-pipeline.png) -->
+![Services pipeline](doc/services-pipeline.png)
 
 If you want a bot for **one category** or a **portfolio across all Polymarket verticals**, reach out on Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) or Discord: **cryptomoonday**.
 
@@ -82,7 +82,7 @@ Polymarket’s CLOB is bot-heavy. Simple gaps often last seconds. Serious system
 | 12 | **Cross-Platform / Correlation Hedge** | Politics + macro + crypto clusters | Related events move as a basket |
 
 <!-- IMAGE PLACEHOLDER: Strategy catalog visual — 12 tiles with strategy names and category tags. Suggested file: doc/strategy-catalog.png -->
-<!-- ![Strategy catalog](doc/strategy-catalog.png) -->
+![Strategy catalog](doc/strategy-catalog.png)
 
 ---
 
@@ -102,7 +102,7 @@ Public live account:
 **https://polymarket.com/@moond**
 
 <!-- IMAGE PLACEHOLDER: Contact / CTA card — Telegram @cryptomoonday23 + Discord cryptomoonday + Polymarket @moond. Suggested file: doc/contact-cta.png -->
-<!-- ![Contact CTA](doc/contact-cta.png) -->
+![Contact CTA](doc/contact-cta.png)
 
 ---
 
@@ -111,7 +111,7 @@ Public live account:
 Automated buy → redeem cycles and portfolio activity from [@moond](https://polymarket.com/@moond). The same settlement loop powers event markets of every type: politics, sports, weather, crypto, and beyond.
 
 <!-- IMAGE PLACEHOLDER: Full Polymarket profile homepage screenshot for @moond (PnL chart + recent positions across categories). Suggested file: doc/moond-profile.png -->
-<!-- ![@moond profile overview](doc/moond-profile.png) -->
+![@moond profile overview](doc/moond-profile.png)
 
 ### On-chain buy → redeem example
 
