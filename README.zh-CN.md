@@ -6,7 +6,6 @@
 
 我构建、部署并支持可扫描与交易 **政治、天气、体育、加密、经济、娱乐等** 类别的 Polymarket 机器人。只要 Polymarket 上有 YES/NO 或多结果事件市场，就能接入同一套利栈：发现错价 → 风险定仓 → CLOB 执行 → 结算赎回。
 
-<!-- IMAGE PLACEHOLDER: 宽幅主视觉 Banner。多市场拼贴（选举、NBA、飓风、美联储、BTC）+ 标题 “Polymarket Arbitrage Bot Tools & Services”。深色专业风。建议文件: doc/banner.png -->
 ![Polymarket Arbitrage Bot Banner](doc/banner.png)
 
 **实盘主页：** [**@moond on Polymarket**](https://polymarket.com/@moond)
@@ -30,8 +29,7 @@
 | **文化 / 娱乐** | 颁奖、票房、热点事件 | 薄盘套利、散户过度反应、做市价差 |
 | **世界 / 其他** | 冲突时间线、科学、定制事件合约 | 约束套利、结算规则优势、长周期做市 |
 
-<!-- IMAGE PLACEHOLDER: 8 宫格品类卡片（政治、体育、天气、加密、宏观、商业、文化、世界）。建议文件: doc/markets-grid.png -->
-<!-- ![我们覆盖的市场](doc/markets-grid.png) -->
+![我们覆盖的市场](doc/markets-grid.png)
 
 ---
 
@@ -44,8 +42,7 @@
 - **监控与提醒**（Telegram）：成交、跳过、回撤、结算
 - **咨询**：架构、VPS/RPC、钱包、策略选型
 
-<!-- IMAGE PLACEHOLDER: 服务流程：你的资金 → Scan/Filter/Size/Execute/Redeem → 各品类市场。建议文件: doc/services-pipeline.png -->
-<!-- ![服务流程](doc/services-pipeline.png) -->
+![服务流程](doc/services-pipeline.png)
 
 无论你要 **单一品类** 机器人，还是 **跨全站垂直领域** 的组合栈，欢迎 Telegram 联系：[@cryptomoonday23](https://t.me/cryptomoonday23)，或 Discord：**cryptomoonday**。
 
@@ -79,8 +76,7 @@
 | 11 | **失衡套利** | 薄盘文化 / 小众事件 | 买入暂时便宜的一侧 |
 | 12 | **跨平台 / 相关对冲** | 政治+宏观+加密集群 | 相关事件作为篮子交易 |
 
-<!-- IMAGE PLACEHOLDER: 12 策略瓦片图，带品类标签。建议文件: doc/strategy-catalog.png -->
-<!-- ![策略目录](doc/strategy-catalog.png) -->
+![策略目录](doc/strategy-catalog.png)
 
 ---
 
@@ -99,8 +95,7 @@
 
 **https://polymarket.com/@moond**
 
-<!-- IMAGE PLACEHOLDER: 联系 CTA — Telegram @cryptomoonday23 + Discord cryptomoonday + Polymarket @moond。建议文件: doc/contact-cta.png -->
-<!-- ![联系 CTA](doc/contact-cta.png) -->
+![联系 CTA](doc/contact-cta.png)
 
 ---
 
@@ -108,8 +103,7 @@
 
 来自 [@moond](https://polymarket.com/@moond) 的自动买入 → 赎回与组合活动。同一结算闭环适用于各类事件市场：政治、体育、天气、加密等。
 
-<!-- IMAGE PLACEHOLDER: @moond 主页完整截图（盈亏曲线 + 多品类持仓）。建议文件: doc/moond-profile.png -->
-<!-- ![@moond 主页概览](doc/moond-profile.png) -->
+![@moond 主页概览](doc/moond-profile.png)
 
 ### 多市场买入 → 赎回活动
 
@@ -208,35 +202,13 @@
 
 > **模式：** 每组展示 **买入结果份额** 与 **结算后赎回**（获胜份额通常经 CTF 按 **$1.00** 换回 USDC）。品类不同，闭环相同。
 
-### 链上买入 → 赎回示例（Polygonscan）
-
-额外已验证的 Polygon 交易，同一机器人结算模式：
-
-#### 交易 1 — 2026年6月11日 · 约 $0.99 入场
-
-| 步骤 | 时间 (UTC) | 详情 | Polygonscan |
-|------|------------|------|-------------|
-| **买入** | 09:30:01 | 约 **$67.32** USDC → **68 股** @ **~$0.99** | [查看买入](https://polygonscan.com/tx/0x6874a18bcd84c18a6e9d5cffd0a94eb0bdc148089a364370eb9120384bc4e21c) |
-| **赎回** | 09:31:03 | 市场结算 → 每股赎回约 **$1.00** | [查看赎回](https://polygonscan.com/tx/0x17e8fbc7ed8d995c44127da034e487733a43f18c6638cdcba9088a519b11ad63) |
-
-**约毛利：** 约 **$0.68**（约 $67 本金，约 **1%**），约 **62 秒**（未计费用）。
-
-#### 交易 2 — 2026年6月11日 · 约 $0.99 入场
-
-| 步骤 | 时间 (UTC) | 详情 | Polygonscan |
-|------|------------|------|-------------|
-| **买入** | 08:55:01 | 接近结算买入热门 @ **~$0.98–$0.99** | [查看买入](https://polygonscan.com/tx/0x7fa58be45dc24afbc8bd135fc6a7147fb548e2c00ad2f5b6100fa7510dd58b45) |
-| **赎回** | 08:55:30 | 买入后约 **29 秒** 结算赎回 | [查看赎回](https://polygonscan.com/tx/0x4edaaa3a6a6d854fe6ec938280ab3cfd34d07f34fcc75c7f4757feccfc9d30dc) |
-
 ### 主页与活动截图
 
 ![Polymarket profile — past day profit/loss and recent trades](doc/daily-pnl.png)
 
-<!-- IMAGE PLACEHOLDER: 混合品类持仓列表（政治+体育+天气等）。建议文件: doc/positions-mixed.png -->
-<!-- ![混合品类持仓](doc/positions-mixed.png) -->
+![混合品类持仓](doc/positions-mixed.png)
 
-<!-- IMAGE PLACEHOLDER: 多事件已结算交易历史表。建议文件: doc/trade-history.png -->
-<!-- ![跨事件交易历史](doc/trade-history.png) -->
+![跨事件交易历史](doc/trade-history.png)
 
 ### 资金流、合并与奖励图库
 
@@ -260,7 +232,6 @@
 
 **Deposit（充值）**
 
-<!-- IMAGE PLACEHOLDER: Polymarket 或钱包充值界面 — USDC 入账金额 + 成功状态。裁剪紧凑，隐藏私钥。建议文件: doc/deposit.png -->
 ![Deposit](doc/deposit.png)
 
 </td>
@@ -268,7 +239,6 @@
 
 **Withdraw（提现）**
 
-<!-- IMAGE PLACEHOLDER: 提现 / 出金界面 — USDC 出账金额 + 成功状态。建议文件: doc/withdraw.png -->
 ![Withdraw](doc/withdraw.png)
 
 </td>
@@ -277,7 +247,6 @@
 
 #### 合并（Merge）
 
-<!-- IMAGE PLACEHOLDER: Merge 界面或链上 merge 交易 — 将配对 YES+NO（或完整结果集）库存换回 USDC。尽量展示合并前后余额。建议文件: doc/merge.png -->
 ![Merge](doc/merge.png)
 
 #### 流动性奖励与持仓奖励
@@ -288,7 +257,6 @@
 
 **Liquidity rewards**
 
-<!-- IMAGE PLACEHOLDER: 流动性奖励面板 — LP 激励收益、领取按钮或奖励历史。建议文件: doc/liquidity-rewards.png -->
 ![Liquidity rewards](doc/liquidity-rewards.png)
 
 </td>
@@ -296,7 +264,6 @@
 
 **Holding rewards**
 
-<!-- IMAGE PLACEHOLDER: 持仓奖励面板 — 持有结果代币/仓位的奖励、领取或历史视图。建议文件: doc/holding-rewards.png -->
 ![Holding rewards](doc/holding-rewards.png)
 
 </td>
@@ -311,7 +278,6 @@
 
 **Maker rebate**
 
-<!-- IMAGE PLACEHOLDER: Maker 返佣面板 — 挂单/限价（maker）成交的费用返还；标出返佣金额与周期。建议文件: doc/maker-rebate.png -->
 ![Maker rebate](doc/maker-rebate.png)
 
 </td>
@@ -319,7 +285,6 @@
 
 **Taker rebate**
 
-<!-- IMAGE PLACEHOLDER: Taker 返佣面板 — 吃单（taker）成交的费用返还（若账户/计划有显示）；标出返佣金额与周期。建议文件: doc/taker-rebate.png -->
 ![Taker rebate](doc/taker-rebate.png)
 
 </td>
@@ -345,8 +310,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 体育上可执行组合套利常集中在 **比赛最后几分钟**，深度是规模瓶颈
 - 纯缺口压缩到秒级；机器人胜在 **扫描速度 + 品类逻辑 + 风控上限**
 
-<!-- IMAGE PLACEHOLDER: 「按品类的 Polymarket 成交量」图。建议文件: doc/volume-by-category.png -->
-<!-- ![按品类成交量](doc/volume-by-category.png) -->
+![按品类成交量](doc/volume-by-category.png)
 
 ---
 
@@ -356,8 +320,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 适用于 **任意** 二元事件。若 `ask_YES + ask_NO < 1.00`（计入费用/缓冲后），买入双边并在结算锁定结构性利润。
 
-<!-- IMAGE PLACEHOLDER: YES 0.48 + NO 0.50 = 0.98 → 锁定 $0.02 示意图。建议文件: doc/diagram-complement-arb.png -->
-<!-- ![互补套利示意](doc/diagram-complement-arb.png) -->
+![互补套利示意](doc/diagram-complement-arb.png)
 
 ### 2. 多结果打包套利
 
@@ -367,8 +330,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 相关市场必须服从约束；机器人将价格投影到有效概率集合并对违规交易。
 
-<!-- IMAGE PLACEHOLDER: 政治相关市场网络图，标红约束冲突边。建议文件: doc/diagram-logical-arb.png -->
-<!-- ![逻辑套利图](doc/diagram-logical-arb.png) -->
+![逻辑套利图](doc/diagram-logical-arb.png)
 
 ### 4. 阶梯 / 101¢ 做市 + 阶梯出场
 
@@ -393,11 +355,9 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 交易 **民调与新闻滞后**（可选 AI 公允赔率）
 - 在流动全国盘做市；对薄州级盘谨慎狙击
 
-<!-- IMAGE PLACEHOLDER: 选举市场集群截图。建议文件: doc/politics-markets.png -->
-<!-- ![政治市场](doc/politics-markets.png) -->
+![政治市场](doc/politics-markets.png)
 
-<!-- IMAGE PLACEHOLDER: 政治套利告警终端/面板。建议文件: doc/politics-bot-alert.png -->
-<!-- ![政治机器人告警](doc/politics-bot-alert.png) -->
+![政治机器人告警](doc/politics-bot-alert.png)
 
 ---
 
@@ -408,11 +368,9 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 按 **盘口深度** 定仓 — 体育套利常受流动性限制
 - 比赛结果接近确定时可选尾盘狙击
 
-<!-- IMAGE PLACEHOLDER: 直播体育盘 + 独赢/让分不一致高亮。建议文件: doc/sports-combinatorial.png -->
-<!-- ![体育组合套利](doc/sports-combinatorial.png) -->
+![体育组合套利](doc/sports-combinatorial.png)
 
-<!-- IMAGE PLACEHOLDER: 开赛→直播→末段套利区时间线。建议文件: doc/sports-timeline.png -->
-<!-- ![体育套利时间线](doc/sports-timeline.png) -->
+![体育套利时间线](doc/sports-timeline.png)
 
 ---
 
@@ -422,8 +380,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 在模型更新周期上比休闲玩家更快重定价
 - 对气温区间市场做互补/打包套利
 
-<!-- IMAGE PLACEHOLDER: 左气象模型图 / 右 Polymarket 气温市场，标出优势。建议文件: doc/weather-model-vs-market.png -->
-<!-- ![天气模型 vs 市场](doc/weather-model-vs-market.png) -->
+![天气模型 vs 市场](doc/weather-model-vs-market.png)
 
 ---
 
@@ -434,8 +391,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 窗口末 **尾盘热门**
 - 流动加密事件盘上的做市 / 阶梯模块
 
-<!-- IMAGE PLACEHOLDER: 加密 Up/Down 盘 + 现货滞后示意。建议文件: doc/crypto-latency.png -->
-<!-- ![加密延迟套利](doc/crypto-latency.png) -->
+![加密延迟套利](doc/crypto-latency.png)
 
 ---
 
@@ -445,8 +401,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 财报 / 并购 / 产品市场的头条滞后交易
 - 利率、风险资产与政治赔率篮子发散时的相关对冲
 
-<!-- IMAGE PLACEHOLDER: 经济日历叠加 Fed/CPI 市场。建议文件: doc/macro-calendar.png -->
-<!-- ![宏观日历市场](doc/macro-calendar.png) -->
+![宏观日历市场](doc/macro-calendar.png)
 
 ---
 
@@ -456,8 +411,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 - 淡化病毒新闻后的极端散户反应
 - 在价差宽、逆向选择可控处做市
 
-<!-- IMAGE PLACEHOLDER: 颁奖/娱乐市场宽买卖价差标注。建议文件: doc/culture-spread.png -->
-<!-- ![文化市场价差](doc/culture-spread.png) -->
+![文化市场价差](doc/culture-spread.png)
 
 ---
 
@@ -472,8 +426,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 | **结算** | 跨事件类型自动合并/赎回 |
 | **运维** | Telegram 提醒、回撤熔断、分品类风险预算 |
 
-<!-- IMAGE PLACEHOLDER: 多市场套利架构分层图。建议文件: doc/architecture-stack.png -->
-<!-- ![架构栈](doc/architecture-stack.png) -->
+![架构栈](doc/architecture-stack.png)
 
 ---
 
@@ -489,8 +442,7 @@ Polymarket 已不只是「加密 Up/Down」。成交与低效出现在：
 
 Telegram：[@cryptomoonday23](https://t.me/cryptomoonday23) · Discord：**cryptomoonday**
 
-<!-- IMAGE PLACEHOLDER: 收尾 CTA — “跨所有事件品类的 Polymarket 套利” + Telegram @cryptomoonday23 + Discord cryptomoonday。建议文件: doc/closing-cta.png -->
-<!-- ![收尾 CTA](doc/closing-cta.png) -->
+![收尾 CTA](doc/closing-cta.png)
 
 ---
 

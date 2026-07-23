@@ -6,7 +6,6 @@ Professional **Polymarket arbitrage bot tools and services** for automated tradi
 
 I build, deploy, and support Polymarket bots that scan and trade **politics, weather, sports, crypto, economics, entertainment, and more**. If an event has a YES/NO or multi-outcome market on Polymarket, it can be wired into the same arbitrage stack: detect mispricing → size risk → execute on the CLOB → redeem at settlement.
 
-<!-- IMAGE PLACEHOLDER: Wide hero banner. Show a multi-market Polymarket mosaic (election, NBA, hurricane, Fed rate, BTC) under a bold title “Polymarket Arbitrage Bot Tools & Services”. Dark, professional, no generic purple AI aesthetic. Suggested file: doc/banner.png -->
 ![Polymarket Arbitrage Bot Banner](doc/banner.png)
 
 **Live profile:** [**@moond on Polymarket**](https://polymarket.com/@moond)
@@ -30,7 +29,6 @@ All major Polymarket categories are available for bot tooling and custom service
 | **Culture / Entertainment** | Awards, box office, viral events | Thin-book arb, retail overreaction, maker spreads |
 | **World / Other** | Conflict timelines, science, custom event contracts | Constraint arb, settlement-rule edge, long-horizon MM |
 
-<!-- IMAGE PLACEHOLDER: Infographic grid of 8 category cards (Politics, Sports, Weather, Crypto, Macro, Business, Culture, World) with small icons. Suggested file: doc/markets-grid.png -->
 ![Markets we serve](doc/markets-grid.png)
 
 ---
@@ -44,7 +42,6 @@ All major Polymarket categories are available for bot tooling and custom service
 - **Monitoring & alerts** (Telegram) for fills, skips, drawdowns, and resolution
 - **Consulting** on architecture, VPS/RPC, wallet setup, and strategy selection
 
-<!-- IMAGE PLACEHOLDER: “Services” diagram — left: You / Your capital; center: Bot stack (Scan → Filter → Size → Execute → Redeem); right: Market categories. Suggested file: doc/services-pipeline.png -->
 ![Services pipeline](doc/services-pipeline.png)
 
 If you want a bot for **one category** or a **portfolio across all Polymarket verticals**, reach out on Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) or Discord: **cryptomoonday**.
@@ -81,7 +78,6 @@ Polymarket’s CLOB is bot-heavy. Simple gaps often last seconds. Serious system
 | 11 | **Imbalance Arb** | Thin culture / niche events | Buy the temporarily cheap side |
 | 12 | **Cross-Platform / Correlation Hedge** | Politics + macro + crypto clusters | Related events move as a basket |
 
-<!-- IMAGE PLACEHOLDER: Strategy catalog visual — 12 tiles with strategy names and category tags. Suggested file: doc/strategy-catalog.png -->
 ![Strategy catalog](doc/strategy-catalog.png)
 
 ---
@@ -101,7 +97,6 @@ Public live account:
 
 **https://polymarket.com/@moond**
 
-<!-- IMAGE PLACEHOLDER: Contact / CTA card — Telegram @cryptomoonday23 + Discord cryptomoonday + Polymarket @moond. Suggested file: doc/contact-cta.png -->
 ![Contact CTA](doc/contact-cta.png)
 
 ---
@@ -110,7 +105,6 @@ Public live account:
 
 Automated buy → redeem cycles and portfolio activity from [@moond](https://polymarket.com/@moond). The same settlement loop powers event markets of every type: politics, sports, weather, crypto, and beyond.
 
-<!-- IMAGE PLACEHOLDER: Full Polymarket profile homepage screenshot for @moond (PnL chart + recent positions across categories). Suggested file: doc/moond-profile.png -->
 ![@moond profile overview](doc/moond-profile.png)
 
 ### Multi-market buy → redeem activity
@@ -210,15 +204,12 @@ The same settlement pattern across **crypto, geopolitics, and sports**: **buy ou
 
 > **Pattern:** Each pair shows **entry into outcome shares** and **redeem after resolution** (typically back to USDC at **$1.00** per winning share via CTF settlement). Categories differ; the loop stays the same.
 
-
 ### Profile & activity screenshots
 
 ![Polymarket profile — past day profit/loss and recent trades](doc/daily-pnl.png)
 
-<!-- IMAGE PLACEHOLDER: Positions list showing mixed categories (e.g. politics + sports + weather). Suggested file: doc/positions-mixed.png -->
 ![Mixed-category positions](doc/positions-mixed.png)
 
-<!-- IMAGE PLACEHOLDER: Trade history table screenshot with several resolved event markets. Suggested file: doc/trade-history.png -->
 ![Trade history across events](doc/trade-history.png)
 
 ### Capital flow, merge & rewards gallery
@@ -243,7 +234,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 **Deposit**
 
-<!-- IMAGE PLACEHOLDER: Polymarket or wallet deposit screen — USDC in, amount + success state. Crop tightly, hide private keys. Suggested file: doc/deposit.png -->
 ![Deposit](doc/deposit.png)
 
 </td>
@@ -251,7 +241,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 **Withdraw**
 
-<!-- IMAGE PLACEHOLDER: Withdraw / cash-out screen — USDC out, amount + success state. Suggested file: doc/withdraw.png -->
 ![Withdraw](doc/withdraw.png)
 
 </td>
@@ -260,7 +249,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 #### Merge
 
-<!-- IMAGE PLACEHOLDER: Merge UI or on-chain merge tx — converting matched YES+NO (or full set) inventory back to USDC. Show before/after balances if possible. Suggested file: doc/merge.png -->
 ![Merge](doc/merge.png)
 
 #### Liquidity rewards & holding rewards
@@ -271,7 +259,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 **Liquidity rewards**
 
-<!-- IMAGE PLACEHOLDER: Liquidity rewards dashboard — earned LP incentives, claim button, or reward history for providing book liquidity. Suggested file: doc/liquidity-rewards.png -->
 ![Liquidity rewards](doc/liquidity-rewards.png)
 
 </td>
@@ -279,7 +266,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 **Holding rewards**
 
-<!-- IMAGE PLACEHOLDER: Holding rewards dashboard — rewards for holding outcome tokens / positions over time, claim or history view. Suggested file: doc/holding-rewards.png -->
 ![Holding rewards](doc/holding-rewards.png)
 
 </td>
@@ -294,7 +280,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 **Maker rebate**
 
-<!-- IMAGE PLACEHOLDER: Maker rebate panel — fees rebated for resting/limit (maker) fills; highlight rebate amount and period. Suggested file: doc/maker-rebate.png -->
 ![Maker rebate](doc/maker-rebate.png)
 
 </td>
@@ -302,7 +287,6 @@ Screenshots of the full Polymarket money loop the bot stack supports — **depos
 
 **Taker rebate**
 
-<!-- IMAGE PLACEHOLDER: Taker rebate panel — fees rebated for aggressive/taker fills (if your account/program shows this); highlight rebate amount and period. Suggested file: doc/taker-rebate.png -->
 ![Taker rebate](doc/taker-rebate.png)
 
 </td>
@@ -328,7 +312,6 @@ Research and industry write-ups in 2025–2026 repeatedly highlight:
 - In sports, executable combinatorial arb often clusters in **final minutes of live games**, with depth as the binding limit
 - Pure gaps compress to seconds; bots win on **scan speed + category logic + risk caps**
 
-<!-- IMAGE PLACEHOLDER: Chart or collage titled “Polymarket volume by category” (politics / sports / crypto / other). Suggested file: doc/volume-by-category.png -->
 ![Volume by category](doc/volume-by-category.png)
 
 ---
@@ -341,7 +324,6 @@ Works on **any** binary event: “Will X win?”, “Will temp exceed Y?”, “
 
 If `ask_YES + ask_NO < 1.00` (after fees/edge buffer), buy both sides and lock structural profit at resolution.
 
-<!-- IMAGE PLACEHOLDER: Simple diagram: YES 0.48 + NO 0.50 = 0.98 → lock $0.02. Suggested file: doc/diagram-complement-arb.png -->
 ![Complement arb diagram](doc/diagram-complement-arb.png)
 
 **Best for:** politics binaries, weather thresholds, sports moneylines, business yes/no.
@@ -362,7 +344,6 @@ Related markets must obey constraints (example patterns used in research):
 
 Bots project prices onto a valid probability set and trade violations.
 
-<!-- IMAGE PLACEHOLDER: Network graph of linked political markets with a red “constraint violation” edge. Suggested file: doc/diagram-logical-arb.png -->
 ![Logical arb graph](doc/diagram-logical-arb.png)
 
 ### 4. Ladder / 101¢ Market Making + Stair Exits
@@ -392,10 +373,8 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 **Why it works:** Politics has deep dependency structure. Research on Polymarket conditions has documented widespread single-market and related-market inefficiencies when constraints are modeled correctly. Retail often prices narratives; bots price **consistency**.
 
-<!-- IMAGE PLACEHOLDER: Screenshot of a Polymarket election market cluster (national + swing states). Suggested file: doc/politics-markets.png -->
 ![Politics markets](doc/politics-markets.png)
 
-<!-- IMAGE PLACEHOLDER: Bot terminal or dashboard capturing a politics complement/logical arb alert. Suggested file: doc/politics-bot-alert.png -->
 ![Politics bot alert](doc/politics-bot-alert.png)
 
 ---
@@ -411,10 +390,8 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 **Why it works:** Sports contracts resolve fast; liquidity may be shallow; emotional retail flow misprices favorites/dogs. Academic and practitioner analyses show executable episodes often cluster near game end.
 
-<!-- IMAGE PLACEHOLDER: Live NBA/soccer Polymarket board + bot arb detector highlighting moneyline vs spread inconsistency. Suggested file: doc/sports-combinatorial.png -->
 ![Sports combinatorial arb](doc/sports-combinatorial.png)
 
-<!-- IMAGE PLACEHOLDER: Timeline graphic: tip-off → live → final minutes arb zone. Suggested file: doc/sports-timeline.png -->
 ![Sports arb timeline](doc/sports-timeline.png)
 
 ---
@@ -430,7 +407,6 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 **Why it works:** Weather markets attract casual flow, while specialists with meteorological models can hold a true information edge — a pattern widely discussed in 2026 strategy content.
 
-<!-- IMAGE PLACEHOLDER: Split view — weather model map (left) vs Polymarket temperature market (right) with edge highlighted. Suggested file: doc/weather-model-vs-market.png -->
 ![Weather model vs market](doc/weather-model-vs-market.png)
 
 ---
@@ -446,7 +422,6 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 
 **Why it works:** Crypto remains a high-turnover vertical. It is one category inside a broader event stack — not the whole product.
 
-<!-- IMAGE PLACEHOLDER: Crypto 5m Up/Down board + spot chart lag illustration. Suggested file: doc/crypto-latency.png -->
 ![Crypto latency arb](doc/crypto-latency.png)
 
 ---
@@ -459,7 +434,6 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 - Trade headline lag in earnings / M&A / product markets
 - Correlation hedges across rates, risk, and political odds when baskets diverge
 
-<!-- IMAGE PLACEHOLDER: Economic calendar overlay on Polymarket Fed/CPI markets. Suggested file: doc/macro-calendar.png -->
 ![Macro calendar markets](doc/macro-calendar.png)
 
 ---
@@ -472,7 +446,6 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 - Fade extreme retail overreactions after viral news
 - Make markets where spreads are wide and adverse selection is manageable
 
-<!-- IMAGE PLACEHOLDER: Awards / entertainment Polymarket page with wide bid-ask spread callout. Suggested file: doc/culture-spread.png -->
 ![Culture market spread](doc/culture-spread.png)
 
 ---
@@ -488,7 +461,6 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 | **Settlement** | Auto merge/redeem winners across all event types |
 | **Ops** | Telegram alerts, drawdown breakers, per-category risk budgets |
 
-<!-- IMAGE PLACEHOLDER: Architecture diagram of multi-market arb stack (layers as table above). Suggested file: doc/architecture-stack.png -->
 ![Architecture stack](doc/architecture-stack.png)
 
 ---
@@ -500,12 +472,11 @@ This project exists to help traders and operators get real **Polymarket arbitrag
 - Not locked to crypto-only strategies
 - Politics, weather, sports, crypto, macro, and more — **all available**
 - Clear strategy maps per category so you know what you’re buying
-- Here my profile: [@moond](https://polymarket.com/@moond)
+- Live profile proof: [@moond](https://polymarket.com/@moond)
 - Custom builds, scanners, execution engines, and ongoing tuning
 
 Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord: **cryptomoonday**
 
-<!-- IMAGE PLACEHOLDER: Closing CTA banner — “Polymarket Arbitrage Across Every Event Category” with Telegram @cryptomoonday23 + Discord cryptomoonday. Suggested file: doc/closing-cta.png -->
 ![Closing CTA](doc/closing-cta.png)
 
 ---
