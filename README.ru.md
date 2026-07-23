@@ -147,6 +147,94 @@
 <!-- IMAGE PLACEHOLDER: История сделок по разным event markets. Файл: doc/trade-history.png -->
 <!-- ![История сделок](doc/trade-history.png) -->
 
+### Галерея: капитал, merge и rewards
+
+Скриншоты полного денежного цикла Polymarket, который поддерживает бот-стек — **deposit / withdraw**, **merge**, **liquidity & holding rewards**, **maker / taker rebates**. Положите файлы в `doc/` с именами ниже.
+
+| Действие | Что снимать | Файл |
+|----------|-------------|------|
+| **Deposit** | UI депозита USDC (или bridge) + success | `doc/deposit.png` |
+| **Withdraw** | UI вывода / cash-out + success | `doc/withdraw.png` |
+| **Merge** | Merge YES+NO (или matched inventory) обратно в USDC | `doc/merge.png` |
+| **Liquidity rewards** | Панель LP / liquidity rewards или история claim | `doc/liquidity-rewards.png` |
+| **Holding rewards** | Панель holding rewards или история выплат | `doc/holding-rewards.png` |
+| **Maker rebate** | Доход maker rebate | `doc/maker-rebate.png` |
+| **Taker rebate** | Доход taker rebate (если применимо) | `doc/taker-rebate.png` |
+
+#### Deposit & withdraw
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Deposit**
+
+<!-- IMAGE PLACEHOLDER: Экран депозита Polymarket/кошелька — USDC in, сумма + success. Обрезать, скрыть ключи. Файл: doc/deposit.png -->
+![Deposit](doc/deposit.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Withdraw**
+
+<!-- IMAGE PLACEHOLDER: Экран вывода — USDC out, сумма + success. Файл: doc/withdraw.png -->
+![Withdraw](doc/withdraw.png)
+
+</td>
+</tr>
+</table>
+
+#### Merge
+
+<!-- IMAGE PLACEHOLDER: Merge UI или on-chain merge tx — matched YES+NO обратно в USDC. Показать балансы до/после по возможности. Файл: doc/merge.png -->
+![Merge](doc/merge.png)
+
+#### Liquidity rewards & holding rewards
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Liquidity rewards**
+
+<!-- IMAGE PLACEHOLDER: Дашборд liquidity rewards — LP incentives, claim, история. Файл: doc/liquidity-rewards.png -->
+![Liquidity rewards](doc/liquidity-rewards.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Holding rewards**
+
+<!-- IMAGE PLACEHOLDER: Дашборд holding rewards — награды за удержание позиций, claim или история. Файл: doc/holding-rewards.png -->
+![Holding rewards](doc/holding-rewards.png)
+
+</td>
+</tr>
+</table>
+
+#### Maker rebate & taker rebate
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Maker rebate**
+
+<!-- IMAGE PLACEHOLDER: Панель maker rebate — возврат комиссий за maker-fills; сумма и период. Файл: doc/maker-rebate.png -->
+![Maker rebate](doc/maker-rebate.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Taker rebate**
+
+<!-- IMAGE PLACEHOLDER: Панель taker rebate — возврат комиссий за taker-fills (если есть); сумма и период. Файл: doc/taker-rebate.png -->
+![Taker rebate](doc/taker-rebate.png)
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## Почему мультирыночный арбитраж Polymarket важен в 2026

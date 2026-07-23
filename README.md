@@ -149,6 +149,94 @@ Real Polygon transactions showing the bot settlement pattern: **enter outcome sh
 <!-- IMAGE PLACEHOLDER: Trade history table screenshot with several resolved event markets. Suggested file: doc/trade-history.png -->
 <!-- ![Trade history across events](doc/trade-history.png) -->
 
+### Capital flow, merge & rewards gallery
+
+Screenshots of the full Polymarket money loop the bot stack supports — **deposit / withdraw**, **merge**, **liquidity & holding rewards**, and **maker / taker rebates**. Drop your captures into `doc/` using the filenames below.
+
+| Action | What to capture | File |
+|--------|-----------------|------|
+| **Deposit** | Wallet / Polymarket deposit USDC (or bridge) confirmation UI | `doc/deposit.png` |
+| **Withdraw** | Withdraw / cash-out confirmation UI | `doc/withdraw.png` |
+| **Merge** | Merge YES+NO (or matched inventory) back to USDC | `doc/merge.png` |
+| **Liquidity rewards** | Liquidity rewards / LP incentives panel or claim history | `doc/liquidity-rewards.png` |
+| **Holding rewards** | Holding / staking-style rewards panel or payout history | `doc/holding-rewards.png` |
+| **Maker rebate** | Maker rebate earnings (fee rebate as maker) | `doc/maker-rebate.png` |
+| **Taker rebate** | Taker rebate earnings (fee rebate as taker, if applicable) | `doc/taker-rebate.png` |
+
+#### Deposit & withdraw
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Deposit**
+
+<!-- IMAGE PLACEHOLDER: Polymarket or wallet deposit screen — USDC in, amount + success state. Crop tightly, hide private keys. Suggested file: doc/deposit.png -->
+![Deposit](doc/deposit.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Withdraw**
+
+<!-- IMAGE PLACEHOLDER: Withdraw / cash-out screen — USDC out, amount + success state. Suggested file: doc/withdraw.png -->
+![Withdraw](doc/withdraw.png)
+
+</td>
+</tr>
+</table>
+
+#### Merge
+
+<!-- IMAGE PLACEHOLDER: Merge UI or on-chain merge tx — converting matched YES+NO (or full set) inventory back to USDC. Show before/after balances if possible. Suggested file: doc/merge.png -->
+![Merge](doc/merge.png)
+
+#### Liquidity rewards & holding rewards
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Liquidity rewards**
+
+<!-- IMAGE PLACEHOLDER: Liquidity rewards dashboard — earned LP incentives, claim button, or reward history for providing book liquidity. Suggested file: doc/liquidity-rewards.png -->
+![Liquidity rewards](doc/liquidity-rewards.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Holding rewards**
+
+<!-- IMAGE PLACEHOLDER: Holding rewards dashboard — rewards for holding outcome tokens / positions over time, claim or history view. Suggested file: doc/holding-rewards.png -->
+![Holding rewards](doc/holding-rewards.png)
+
+</td>
+</tr>
+</table>
+
+#### Maker rebate & taker rebate
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Maker rebate**
+
+<!-- IMAGE PLACEHOLDER: Maker rebate panel — fees rebated for resting/limit (maker) fills; highlight rebate amount and period. Suggested file: doc/maker-rebate.png -->
+![Maker rebate](doc/maker-rebate.png)
+
+</td>
+<td width="50%" valign="top">
+
+**Taker rebate**
+
+<!-- IMAGE PLACEHOLDER: Taker rebate panel — fees rebated for aggressive/taker fills (if your account/program shows this); highlight rebate amount and period. Suggested file: doc/taker-rebate.png -->
+![Taker rebate](doc/taker-rebate.png)
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## Why Multi-Market Polymarket Arbitrage Matters in 2026
