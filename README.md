@@ -412,10 +412,10 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 **Why it works:** Sports contracts resolve fast; liquidity may be shallow; emotional retail flow misprices favorites/dogs. Academic and practitioner analyses show executable episodes often cluster near game end.
 
 <!-- IMAGE PLACEHOLDER: Live NBA/soccer Polymarket board + bot arb detector highlighting moneyline vs spread inconsistency. Suggested file: doc/sports-combinatorial.png -->
-<!-- ![Sports combinatorial arb](doc/sports-combinatorial.png) -->
+![Sports combinatorial arb](doc/sports-combinatorial.png)
 
 <!-- IMAGE PLACEHOLDER: Timeline graphic: tip-off → live → final minutes arb zone. Suggested file: doc/sports-timeline.png -->
-<!-- ![Sports arb timeline](doc/sports-timeline.png) -->
+![Sports arb timeline](doc/sports-timeline.png)
 
 ---
 
@@ -431,7 +431,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 **Why it works:** Weather markets attract casual flow, while specialists with meteorological models can hold a true information edge — a pattern widely discussed in 2026 strategy content.
 
 <!-- IMAGE PLACEHOLDER: Split view — weather model map (left) vs Polymarket temperature market (right) with edge highlighted. Suggested file: doc/weather-model-vs-market.png -->
-<!-- ![Weather model vs market](doc/weather-model-vs-market.png) -->
+![Weather model vs market](doc/weather-model-vs-market.png)
 
 ---
 
@@ -447,7 +447,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 **Why it works:** Crypto remains a high-turnover vertical. It is one category inside a broader event stack — not the whole product.
 
 <!-- IMAGE PLACEHOLDER: Crypto 5m Up/Down board + spot chart lag illustration. Suggested file: doc/crypto-latency.png -->
-<!-- ![Crypto latency arb](doc/crypto-latency.png) -->
+![Crypto latency arb](doc/crypto-latency.png)
 
 ---
 
@@ -460,7 +460,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 - Correlation hedges across rates, risk, and political odds when baskets diverge
 
 <!-- IMAGE PLACEHOLDER: Economic calendar overlay on Polymarket Fed/CPI markets. Suggested file: doc/macro-calendar.png -->
-<!-- ![Macro calendar markets](doc/macro-calendar.png) -->
+![Macro calendar markets](doc/macro-calendar.png)
 
 ---
 
@@ -473,7 +473,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 - Make markets where spreads are wide and adverse selection is manageable
 
 <!-- IMAGE PLACEHOLDER: Awards / entertainment Polymarket page with wide bid-ask spread callout. Suggested file: doc/culture-spread.png -->
-<!-- ![Culture market spread](doc/culture-spread.png) -->
+![Culture market spread](doc/culture-spread.png)
 
 ---
 
@@ -489,7 +489,7 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 | **Ops** | Telegram alerts, drawdown breakers, per-category risk budgets |
 
 <!-- IMAGE PLACEHOLDER: Architecture diagram of multi-market arb stack (layers as table above). Suggested file: doc/architecture-stack.png -->
-<!-- ![Architecture stack](doc/architecture-stack.png) -->
+![Architecture stack](doc/architecture-stack.png)
 
 ---
 
@@ -506,7 +506,7 @@ This project exists to help traders and operators get real **Polymarket arbitrag
 Telegram: [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord: **cryptomoonday**
 
 <!-- IMAGE PLACEHOLDER: Closing CTA banner — “Polymarket Arbitrage Across Every Event Category” with Telegram @cryptomoonday23 + Discord cryptomoonday. Suggested file: doc/closing-cta.png -->
-<!-- ![Closing CTA](doc/closing-cta.png) -->
+![Closing CTA](doc/closing-cta.png)
 
 ---
 
