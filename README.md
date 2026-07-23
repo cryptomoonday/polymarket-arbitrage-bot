@@ -329,7 +329,7 @@ Research and industry write-ups in 2025–2026 repeatedly highlight:
 - Pure gaps compress to seconds; bots win on **scan speed + category logic + risk caps**
 
 <!-- IMAGE PLACEHOLDER: Chart or collage titled “Polymarket volume by category” (politics / sports / crypto / other). Suggested file: doc/volume-by-category.png -->
-<!-- ![Volume by category](doc/volume-by-category.png) -->
+![Volume by category](doc/volume-by-category.png)
 
 ---
 
@@ -342,7 +342,7 @@ Works on **any** binary event: “Will X win?”, “Will temp exceed Y?”, “
 If `ask_YES + ask_NO < 1.00` (after fees/edge buffer), buy both sides and lock structural profit at resolution.
 
 <!-- IMAGE PLACEHOLDER: Simple diagram: YES 0.48 + NO 0.50 = 0.98 → lock $0.02. Suggested file: doc/diagram-complement-arb.png -->
-<!-- ![Complement arb diagram](doc/diagram-complement-arb.png) -->
+![Complement arb diagram](doc/diagram-complement-arb.png)
 
 **Best for:** politics binaries, weather thresholds, sports moneylines, business yes/no.
 
@@ -363,7 +363,7 @@ Related markets must obey constraints (example patterns used in research):
 Bots project prices onto a valid probability set and trade violations.
 
 <!-- IMAGE PLACEHOLDER: Network graph of linked political markets with a red “constraint violation” edge. Suggested file: doc/diagram-logical-arb.png -->
-<!-- ![Logical arb graph](doc/diagram-logical-arb.png) -->
+![Logical arb graph](doc/diagram-logical-arb.png)
 
 ### 4. Ladder / 101¢ Market Making + Stair Exits
 
@@ -393,10 +393,10 @@ Near resolution, buy favorites in the **0.95–0.99** band when remaining uncert
 **Why it works:** Politics has deep dependency structure. Research on Polymarket conditions has documented widespread single-market and related-market inefficiencies when constraints are modeled correctly. Retail often prices narratives; bots price **consistency**.
 
 <!-- IMAGE PLACEHOLDER: Screenshot of a Polymarket election market cluster (national + swing states). Suggested file: doc/politics-markets.png -->
-<!-- ![Politics markets](doc/politics-markets.png) -->
+![Politics markets](doc/politics-markets.png)
 
 <!-- IMAGE PLACEHOLDER: Bot terminal or dashboard capturing a politics complement/logical arb alert. Suggested file: doc/politics-bot-alert.png -->
-<!-- ![Politics bot alert](doc/politics-bot-alert.png) -->
+![Politics bot alert](doc/politics-bot-alert.png)
 
 ---
 
