@@ -16,6 +16,97 @@
 
 **Telegram：** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord：** cryptomoonday · **作者：** [@cryptomoonday](https://github.com/cryptomoonday)
 
+**仓库：** [github.com/cryptomoonday/polymarket-arbitrage-bot](https://github.com/cryptomoonday/polymarket-arbitrage-bot)
+
+---
+
+## 安装与使用 — Polymarket 套利机器人
+
+本仓库包含可运行的 **Polymarket arbitrage bot** 模块，面向 **5 分钟加密 Up/Down** 市场（`BTC`、`ETH`、`SOL`、`XRP`）。机器人连接 Polymarket CLOB、读取 USDC 余额、监控实时价格，并运行 **尾盘热门狙击** 循环（窗口末段买入约 $0.97–$0.99 的热门一侧，持有至结算附近）。
+
+需要政治、体育、天气或多结果套利模块？联系 [@cryptomoonday23](https://t.me/cryptomoonday23) 定制。
+
+### 环境要求
+
+- **Node.js** `>= 20.6.0`
+- 已入金的 Polymarket 钱包（**Polygon 上的 USDC**）
+- 钱包 **私钥**（若使用邮箱/社交登录，还需代理地址）
+
+### 1. 克隆仓库
+
+```bash
+git clone https://github.com/cryptomoonday/polymarket-arbitrage-bot.git
+cd polymarket-arbitrage-bot
+```
+
+### 2. 安装依赖
+
+```bash
+npm install
+```
+
+### 3. 配置 `.env`
+
+```bash
+cp .env.example .env
+```
+
+编辑 `.env`：
+
+| 变量 | 必填 | 说明 |
+|------|------|------|
+| `POLYMARKET_PRIVATE_KEY` | **是** | 用于签名 CLOB 请求的 64 位十六进制私钥（可带或不带 `0x`） |
+| `PROXY_WALLET_ADDRESS` | 否 | 若用邮箱/社交注册 Polymarket，填写 **proxy / funder** 地址；普通 EOA（如 MetaMask）可留空 |
+
+示例：
+
+```env
+POLYMARKET_PRIVATE_KEY=0xyour_private_key_here
+# PROXY_WALLET_ADDRESS=0xyour_polymarket_profile_address
+```
+
+不要提交 `.env`（已在 `.gitignore` 中）。
+
+### 4. 启动机器人
+
+```bash
+npm start
+```
+
+启动后机器人会：
+
+1. 校验 `POLYMARKET_PRIVATE_KEY`
+2. 通过 Polymarket CLOB API 读取 USDC 余额
+3. 轮询 BTC / ETH / SOL / XRP 5m Up/Down 市场
+4. 在尾盘时间窗内、价格落在设定区间时入场
+5. 临近结算（约 `t ≈ 298s`）执行退出 / 赎回逻辑
+6. 将日志写入 **`logs.txt`** 并同步输出到控制台
+
+用 **Ctrl+C** 停止 — 会打印最终盈亏汇总。
+
+### 策略默认参数（本模块）
+
+| 参数 | 值 |
+|------|-----|
+| 市场 | BTC、ETH、SOL、XRP — 5m Up/Down |
+| 单笔金额 | `$10` |
+| 入场时间 | 5 分钟窗口内第 `250–290` 秒 |
+| 入场价格带 | `0.97–0.99`（热门一侧） |
+| 结算检查 | 约 `298` 秒 |
+| 轮询间隔 | `2s`（`t=240s` 后改为 `1s`） |
+
+可在 `src/index.ts` 中调整常量：`BET_USD`、`ENTRY_TIME_*`、`ENTRY_PRICE_*`、`MARKETS` 等。
+
+### 常见问题
+
+- **`POLYMARKET_PRIVATE_KEY is required`** — 请将 `.env.example` 复制为 `.env` 并填写私钥
+- **私钥无效** — 必须是 64 位十六进制（`0x` 可选）
+- **Wallet balance is $0** — 请向交易 / 代理钱包充值 USDC
+- **邮箱/社交登录用户** — 设置 `PROXY_WALLET_ADDRESS` 为 Polymarket 主页（funder）地址
+- **限流提示** — 机器人会自动退避，保持运行即可
+
+安装协助或定制 **Polymarket 套利机器人**：Telegram [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord **cryptomoonday**。
+
 ---
 
 ## Polymarket 套利机器人覆盖的市场

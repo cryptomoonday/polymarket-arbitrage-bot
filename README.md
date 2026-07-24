@@ -16,6 +16,97 @@ A **Polymarket arbitrage bot** is automated software that profits from pricing i
 
 **Telegram:** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord:** cryptomoonday · **Author:** [@cryptomoonday](https://github.com/cryptomoonday)
 
+**Repo:** [github.com/cryptomoonday/polymarket-arbitrage-bot](https://github.com/cryptomoonday/polymarket-arbitrage-bot)
+
+---
+
+## Install & Use — Polymarket Arbitrage Bot
+
+This repo ships a ready **Polymarket arbitrage bot** module for **5-minute crypto Up/Down** markets (`BTC`, `ETH`, `SOL`, `XRP`). It connects to the Polymarket CLOB, reads your USDC balance, monitors live prices, and runs a **late-window favorite snipe** loop (buy the side trading ~$0.97–$0.99 near window end, hold toward resolution).
+
+Need politics, sports, weather, or multi-outcome arb modules? Contact [@cryptomoonday23](https://t.me/cryptomoonday23) for custom builds.
+
+### Requirements
+
+- **Node.js** `>= 20.6.0`
+- A Polymarket-funded wallet with **USDC on Polygon**
+- Your wallet **private key** (and proxy address if you use Polymarket email/social login)
+
+### 1. Clone
+
+```bash
+git clone https://github.com/cryptomoonday/polymarket-arbitrage-bot.git
+cd polymarket-arbitrage-bot
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure `.env`
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env`:
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `POLYMARKET_PRIVATE_KEY` | **Yes** | 64-hex private key (with or without `0x`) for the wallet that signs CLOB requests |
+| `PROXY_WALLET_ADDRESS` | No | Polymarket **proxy / funder** address if you signed up with email or social login. Leave blank for a normal EOA (MetaMask, etc.) |
+
+Example:
+
+```env
+POLYMARKET_PRIVATE_KEY=0xyour_private_key_here
+# PROXY_WALLET_ADDRESS=0xyour_polymarket_profile_address
+```
+
+Never commit `.env`. It is gitignored.
+
+### 4. Run the bot
+
+```bash
+npm start
+```
+
+On start the bot will:
+
+1. Validate `POLYMARKET_PRIVATE_KEY`
+2. Fetch your USDC balance from the Polymarket CLOB API
+3. Poll live BTC / ETH / SOL / XRP 5m Up/Down markets
+4. Enter late in the window when the favorite is in the configured price band
+5. Exit / redeem logic near resolution (`t ≈ 298s`)
+6. Append activity to **`logs.txt`** and print to the console
+
+Stop with **Ctrl+C** — the bot prints a final P/L summary.
+
+### Strategy defaults (included module)
+
+| Setting | Value |
+|---------|-------|
+| Markets | BTC, ETH, SOL, XRP — 5m Up/Down |
+| Bet size | `$10` per entry |
+| Entry window | `250–290s` into the 5m period |
+| Entry price band | `0.97–0.99` (favorite side) |
+| Resolve check | `~298s` |
+| Poll interval | `2s` ( `1s` after `t=240s` ) |
+
+Tune these constants in `src/index.ts` (`BET_USD`, `ENTRY_TIME_*`, `ENTRY_PRICE_*`, `MARKETS`, etc.).
+
+### Troubleshooting
+
+- **`POLYMARKET_PRIVATE_KEY is required`** — copy `.env.example` → `.env` and set the key
+- **Invalid private key** — must be 64 hex chars (`0x` optional)
+- **Wallet balance is $0** — deposit USDC into the trading / proxy wallet on Polymarket
+- **Email/social login users** — set `PROXY_WALLET_ADDRESS` to your Polymarket profile (funder) address
+- **Rate limit warnings** — the bot backs off automatically; wait and keep it running
+
+For setup help or a custom **Polymarket arbitrage bot** stack: Telegram [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord **cryptomoonday**.
+
 ---
 
 ## Polymarket Arbitrage Bot Markets

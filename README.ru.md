@@ -16,6 +16,97 @@
 
 **Telegram:** [@cryptomoonday23](https://t.me/cryptomoonday23) · **Discord:** cryptomoonday · **Автор:** [@cryptomoonday](https://github.com/cryptomoonday)
 
+**Репозиторий:** [github.com/cryptomoonday/polymarket-arbitrage-bot](https://github.com/cryptomoonday/polymarket-arbitrage-bot)
+
+---
+
+## Установка и запуск — Polymarket Arbitrage Bot
+
+В репозитории есть готовый модуль **Polymarket arbitrage bot** для рынков **5-минутных crypto Up/Down** (`BTC`, `ETH`, `SOL`, `XRP`). Бот подключается к Polymarket CLOB, читает баланс USDC, мониторит live-цены и запускает цикл **late-window favorite snipe** (покупка стороны ~$0.97–$0.99 ближе к концу окна, удержание к резолюции).
+
+Нужны политика, спорт, погода или multi-outcome arb? Пишите [@cryptomoonday23](https://t.me/cryptomoonday23) за кастомной сборкой.
+
+### Требования
+
+- **Node.js** `>= 20.6.0`
+- Кошелёк Polymarket с **USDC на Polygon**
+- **Приватный ключ** кошелька (и proxy-адрес при email/social login)
+
+### 1. Клонировать
+
+```bash
+git clone https://github.com/cryptomoonday/polymarket-arbitrage-bot.git
+cd polymarket-arbitrage-bot
+```
+
+### 2. Установить зависимости
+
+```bash
+npm install
+```
+
+### 3. Настроить `.env`
+
+```bash
+cp .env.example .env
+```
+
+Отредактируйте `.env`:
+
+| Переменная | Обязательно | Описание |
+|------------|-------------|----------|
+| `POLYMARKET_PRIVATE_KEY` | **Да** | 64-hex приватный ключ (с `0x` или без) для подписи CLOB-запросов |
+| `PROXY_WALLET_ADDRESS` | Нет | Адрес **proxy / funder** Polymarket при регистрации через email/social. Для обычного EOA (MetaMask и т.п.) оставьте пустым |
+
+Пример:
+
+```env
+POLYMARKET_PRIVATE_KEY=0xyour_private_key_here
+# PROXY_WALLET_ADDRESS=0xyour_polymarket_profile_address
+```
+
+Не коммитьте `.env` — файл в `.gitignore`.
+
+### 4. Запустить бота
+
+```bash
+npm start
+```
+
+При старте бот:
+
+1. Проверит `POLYMARKET_PRIVATE_KEY`
+2. Запросит баланс USDC через Polymarket CLOB API
+3. Будет опрашивать рынки BTC / ETH / SOL / XRP 5m Up/Down
+4. Войдёт поздно в окне, когда фаворит в заданном ценовом диапазоне
+5. Выполнит логику выхода / redeem около резолюции (`t ≈ 298s`)
+6. Пишет активность в **`logs.txt`** и в консоль
+
+Остановка — **Ctrl+C**; бот выведет итоговый P/L.
+
+### Параметры стратегии по умолчанию
+
+| Параметр | Значение |
+|----------|----------|
+| Рынки | BTC, ETH, SOL, XRP — 5m Up/Down |
+| Размер ставки | `$10` на вход |
+| Окно входа | `250–290` сек внутри 5m |
+| Ценовой диапазон | `0.97–0.99` (сторона-фаворит) |
+| Проверка резолюции | `~298` сек |
+| Интервал опроса | `2s` (`1s` после `t=240s`) |
+
+Меняйте константы в `src/index.ts`: `BET_USD`, `ENTRY_TIME_*`, `ENTRY_PRICE_*`, `MARKETS` и др.
+
+### Troubleshooting
+
+- **`POLYMARKET_PRIVATE_KEY is required`** — скопируйте `.env.example` → `.env` и укажите ключ
+- **Неверный ключ** — ровно 64 hex-символа (`0x` опционален)
+- **Wallet balance is $0** — пополните USDC на торговом / proxy-кошельке
+- **Email/social login** — задайте `PROXY_WALLET_ADDRESS` (профиль / funder на Polymarket)
+- **Rate limit** — бот сам делает backoff; просто оставьте его работать
+
+Помощь по установке или кастомный **Polymarket arbitrage bot**: Telegram [@cryptomoonday23](https://t.me/cryptomoonday23) · Discord **cryptomoonday**.
+
 ---
 
 ## Рынки Polymarket Arbitrage Bot
